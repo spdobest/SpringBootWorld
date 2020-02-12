@@ -6,11 +6,12 @@ its provide a ready made web application project where all the configuration don
 2. Annotation Processor  
 3. 
 
-## SPRING SUITE AND SPRING TOOLS (IDE- Integrated Development Environment)  
-## IDE  
+## SPRING SUITE AND SPRING TOOLS 
+(IDE- Integrated Development Environment)  
+### IDE  
 1. NetBeans  
 2. Eclipse  
-3. STS - its provided by springboot comunity  
+3. Spring Tool Suite (STS)  
   
 You can download **Spring STS** from the link below  
 **https://spring.io/guides/gs/sts/**  
