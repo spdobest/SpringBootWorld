@@ -15,6 +15,26 @@ its provide a ready made web application project where all the configuration don
   
 You can download **Spring STS** from the link below  
 **https://spring.io/guides/gs/sts/**  
+    
+For Example if we want to buidl a laptop we need different parts from different companies. To assesmble them and make the laptop will take a lop of effort. For that there is a dependency between all the parts used to develop an laptop.
+Same as laptop if we build a project there are different modules are needed and there must be a dependency between each other.    
+**Loose Coupling** If One object is not completely dependent on another object. WE can use one object instead of another. This is known as Loose Coupling. LEts for example, while assembling HP laptop, we can use Hard disk of any company(Samsung, HP,ASUS). So this is known as Loose Coupling.  
   
+**Tight Coupling** When a object or classes is totaly dependent on another class and we cant use other class/object instead of the class. THis is known as Tight Coupling. FOr Apple Laptop only Apple harddisk is required to assemble it. So this is tight coupling.  
+  
+**In spring object's are provided by another dependency container. In spring all the dependency objects are provided by Soring Container. THis is nothing but Dependency Injection.**  
+  
+**SpringBoot terms**  
+**1. @Component** - 
+**2. @AutoWired**-
+**3. @Controller**-
+**2. @SpringBootApplication**-
+**2. @RequestMapping("/login")**-
+**2. @ResponseBody**-
+**2. @RequestMapper**-
+**2. ModelAndView**-
+**2. @AutoWired**-
+**2. @AutoWired**-
+**2. @AutoWired**-
   
   
