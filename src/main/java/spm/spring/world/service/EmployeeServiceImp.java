@@ -1,5 +1,7 @@
 package spm.spring.world.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import spm.spring.world.dao.IEmployeeDao;
 import spm.spring.world.dto.Employee;
 import org.springframework.stereotype.Service;
 
@@ -25,39 +27,43 @@ public class EmployeeServiceImp implements IEmployeeService {
 
     List<Employee> empList = new ArrayList<>(empList1);
 
+    @Autowired
+    private IEmployeeDao iEmployeeDao;
+
     @Override
     public List<Employee> getAllEmployee() {
-        return empList;
+        return iEmployeeDao.findAll();
     }
 
     @Override
     public Employee getEmployeeById(int empId) {
-        return empList.stream().filter(e -> e.getEmpId() == empId).findFirst().get();
+        //return empList.stream().filter(e -> e.getEmpId() == empId).findFirst().get();
+        return iEmployeeDao.getOne(empId);
     }
 
     @Override
     public void addEmployee(Employee employee) {
-        empList.add(employee);
+       // empList.add(employee);
+        iEmployeeDao.save(employee);
     }
 
     @Override
     public void updateEmployee(Employee employee,int empId) {
 
-        for(int i = 0;i<empList.size();i++){
+       /* for(int i = 0;i<empList.size();i++){
             Employee e = empList.get(i);
             if(e.getEmpId() == empId){
                 empList.set(i,employee);
             }
-        }
+        }*/
+
+        iEmployeeDao.save(employee);
+
     }
 
     @Override
     public void deleteEmployee(int empId) {
-        empList.removeIf(e -> e.getEmpId() == empId);
-//        empList.forEach(e ->{
-//            if(e.getEmpId() == empId){
-//                empList.remove(e);
-//            }
-//        });
+//        empList.removeIf(e -> e.getEmpId() == empId);
+        iEmployeeDao.deleteById(empId);
     }
 }

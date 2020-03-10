@@ -1,6 +1,13 @@
-package com.springBoot.restapi.dto;
+package spm.spring.world.dto;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Employee {
+    @Id
+    @GeneratedValue
     private  int empId;
     private String empName;
     private String department;
