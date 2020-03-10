@@ -1,38 +1,27 @@
 package spm.spring.world.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Alien {
-    private int id;
-    private String name;
-
-    public Alien() {
+    @Id
+    private int aid;
+    private String aname;
+    public int getAid() {
+        return aid;
     }
-
-    public Alien(int id, String name) {
-        this.id = id;
-        this.name = name;
+    public void setAid(int aid) {
+        this.aid = aid;
     }
-
-    public int getId() {
-        return id;
+    public String getAname() {
+        return aname;
     }
-
+    public void setAname(String aname) {
+        this.aname = aname;
+    }
     @Override
     public String toString() {
-        return "Alian{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+        return "Alien [aid=" + aid + ", aname=" + aname + "]";
     }
 }

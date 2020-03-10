@@ -2,9 +2,10 @@ package spm.spring.world.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import spm.spring.world.model.Alien;
+import spm.spring.world.model.Student;
+
 
 @Repository
-public interface AlienRepo extends CrudRepository<Alien,Integer> {
-
+public interface StudentRepository extends CrudRepository<Student, Integer>{
+ 
 }
