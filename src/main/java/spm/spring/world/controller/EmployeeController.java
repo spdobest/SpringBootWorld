@@ -42,4 +42,9 @@ public class EmployeeController {
     public void deleteEmployee(@PathVariable("employeeId") int employeeId){
         empServiceRef.deleteEmployee(employeeId);
     }
+
+    @RequestMapping("/employees/dept/{department}")
+    public List<Employee> getEmployeeByDept(@PathVariable String department){
+        return empServiceRef.getEmployeeByDept(department);
+    }
 }

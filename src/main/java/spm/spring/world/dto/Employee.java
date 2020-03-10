@@ -1,21 +1,32 @@
 package spm.spring.world.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Employee {
     @Id
     @GeneratedValue
     private  int empId;
+    @Column(name="empName")
     private String empName;
+    @Column(name="department")
     private String department;
+    @Column(name="salary")
+    private String salary;
 
-    public Employee(int empId, String empName, String department) {
+    public String getSalary() {
+        return salary;
+    }
+
+    public void setSalary(String salary) {
+        this.salary = salary;
+    }
+
+    public Employee(int empId, String empName, String department, String salary) {
         this.empId = empId;
         this.empName = empName;
         this.department = department;
+        this.salary = salary;
     }
 
     public Employee() {

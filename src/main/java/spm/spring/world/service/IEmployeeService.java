@@ -10,4 +10,5 @@ public interface IEmployeeService {
    void addEmployee(Employee employee);
    void updateEmployee(Employee employee,int empId);
    void deleteEmployee(int empId);
+   List<Employee>  getEmployeeByDept(String department);
 }

@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b007e96b-e3d8-4e97-8429-8aa71d5e025b" name="Default Changelist" comment="" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="b007e96b-e3d8-4e97-8429-8aa71d5e025b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controller/ProjectController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/dao/IProjectDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/dto/Project.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/service/IProjectService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/service/ProjectServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Springboot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Springboot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SPRING_REST_API.md" beforeDir="false" afterPath="$PROJECT_DIR$/SPRING_REST_API.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/SpringBootWorldApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/SpringBootWorldApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/dao/IEmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/dao/IEmployeeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/dto/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/dto/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/service/EmployeeServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/service/EmployeeServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/service/IEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/service/IEmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,173 +27,33 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/spm/spring/world/SpringBootWorldApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/spm/spring/world/service/IEmployeeService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/spm/spring/world/controller/EmployeeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SPRING_REST_API.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/spm/spring/world/dto/Employee.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/spm/spring/world/dao/IEmployeeDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/spm/spring/world/service/EmployeeServiceImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="SpringBootRestApiBasics" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/SpringDemo/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/spm/spring/world/SpringBootWorldApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spm/spring/world/controller/EmployeeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spm/spring/world/service/IEmployeeService.java" />
-        <option value="$PROJECT_DIR$/SPRING_REST_API.md" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/spm/spring/world/dto/Employee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spm/spring/world/dao/IEmployeeDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spm/spring/world/service/EmployeeServiceImp.java" />
-      </list>
-    </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1114" />
-    <option name="height" value="704" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="SpringBootWorld" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringBootWorld" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/spm/spring/world" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.56436783" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -191,18 +66,6 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration name="SpringBootWorldApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="spm.spring.world.SpringBootWorldApplication" />
@@ -211,6 +74,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -234,205 +109,57 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="704" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22132471" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.32843137" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.4722222" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32843137" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" weight="0.556903" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SpringDemo/src/main/resources/application.properties" />
-    <entry file="file://$PROJECT_DIR$/SpringDemo/src/main/java/com/example/demo/controller/EmployeeController.java" />
-    <entry file="file://$PROJECT_DIR$/SpringDemo/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/SpringBootRestAPI/src/main/java/com/springBoot/restapi/dto/Employee.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/spm/spring/world/service/IEmployeeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spm/spring/world/SpringBootWorldApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPRING_REST_API.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spm/spring/world/controller/EmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spm/spring/world/dto/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spm/spring/world/dao/IEmployeeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spm/spring/world/service/EmployeeServiceImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Springboot</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="WindowStateProjectService">
+    <state x="436" y="211" key="#com.intellij.ide.util.MemberChooser" timestamp="1583843589759">
+      <screen x="0" y="23" width="1920" height="978" />
+    </state>
+    <state x="436" y="211" key="#com.intellij.ide.util.MemberChooser/0.23.1920.977@0.23.1920.977" timestamp="1583838870767" />
+    <state x="436" y="211" key="#com.intellij.ide.util.MemberChooser/0.23.1920.978@0.23.1920.978" timestamp="1583843589759" />
+    <state x="0" y="101" width="1536" height="781" key="DiffContextDialog" timestamp="1583837896809">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="0" y="101" width="1536" height="781" key="DiffContextDialog/0.23.1920.977@0.23.1920.977" timestamp="1583837896809" />
+    <state x="0" y="101" key="DiffContextDialog/0.23.1920.978@0.23.1920.978" timestamp="1583833655787" />
+    <state width="1203" height="363" key="GridCell.Tab.0.bottom" timestamp="1583844252625">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="1203" height="363" key="GridCell.Tab.0.bottom/0.23.1920.977@0.23.1920.977" timestamp="1583844252625" />
+    <state width="1203" height="365" key="GridCell.Tab.0.bottom/0.23.1920.978@0.23.1920.978" timestamp="1583843719522" />
+    <state width="1203" height="363" key="GridCell.Tab.0.center" timestamp="1583844252622">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="1203" height="363" key="GridCell.Tab.0.center/0.23.1920.977@0.23.1920.977" timestamp="1583844252622" />
+    <state width="1203" height="365" key="GridCell.Tab.0.center/0.23.1920.978@0.23.1920.978" timestamp="1583843719521" />
+    <state width="1203" height="363" key="GridCell.Tab.0.left" timestamp="1583844252621">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="1203" height="363" key="GridCell.Tab.0.left/0.23.1920.977@0.23.1920.977" timestamp="1583844252621" />
+    <state width="1203" height="365" key="GridCell.Tab.0.left/0.23.1920.978@0.23.1920.978" timestamp="1583843719521" />
+    <state width="1203" height="363" key="GridCell.Tab.0.right" timestamp="1583844252623">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="1203" height="363" key="GridCell.Tab.0.right/0.23.1920.977@0.23.1920.977" timestamp="1583844252623" />
+    <state width="1203" height="365" key="GridCell.Tab.0.right/0.23.1920.978@0.23.1920.978" timestamp="1583843719522" />
+    <state x="643" y="173" key="RollbackChangesDialog" timestamp="1583837872183">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="643" y="173" key="RollbackChangesDialog/0.23.1920.977@0.23.1920.977" timestamp="1583837872183" />
+    <state x="446" y="85" key="SettingsEditor" timestamp="1583834260542">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="446" y="85" key="SettingsEditor/0.23.1920.977@0.23.1920.977" timestamp="1583834260542" />
+    <state x="282" y="125" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583842995945">
+      <screen x="0" y="23" width="1920" height="978" />
+    </state>
+    <state x="282" y="125" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1920.977@0.23.1920.977" timestamp="1583838864072" />
+    <state x="282" y="125" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1920.978@0.23.1920.978" timestamp="1583842995945" />
+    <state x="304" y="260" width="639" height="486" key="find.popup" timestamp="1583842865931">
+      <screen x="0" y="23" width="1920" height="978" />
+    </state>
+    <state x="304" y="260" width="639" height="486" key="find.popup/0.23.1920.978@0.23.1920.978" timestamp="1583842865931" />
+    <state x="482" y="223" key="git4idea.branch.GitSmartOperationDialog" timestamp="1583833657356">
+      <screen x="0" y="23" width="1920" height="978" />
+    </state>
+    <state x="482" y="223" key="git4idea.branch.GitSmartOperationDialog/0.23.1920.978@0.23.1920.978" timestamp="1583833657356" />
   </component>
 </project>
