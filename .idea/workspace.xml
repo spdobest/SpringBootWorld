@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b007e96b-e3d8-4e97-8429-8aa71d5e025b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controller/ProjectController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/dao/IProjectDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/dto/Project.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/service/IProjectService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/service/ProjectServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Springboot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Springboot.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SPRING_REST_API.md" beforeDir="false" afterPath="$PROJECT_DIR$/SPRING_REST_API.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/SpringBootWorldApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/SpringBootWorldApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/dao/IEmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/dao/IEmployeeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/dto/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/dto/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/service/EmployeeServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/service/EmployeeServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/service/IEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/service/IEmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,25 +108,25 @@
     </state>
     <state x="0" y="101" width="1536" height="781" key="DiffContextDialog/0.23.1920.977@0.23.1920.977" timestamp="1583837896809" />
     <state x="0" y="101" key="DiffContextDialog/0.23.1920.978@0.23.1920.978" timestamp="1583833655787" />
-    <state width="1203" height="363" key="GridCell.Tab.0.bottom" timestamp="1583844252625">
+    <state width="1203" height="363" key="GridCell.Tab.0.bottom" timestamp="1583844489970">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state width="1203" height="363" key="GridCell.Tab.0.bottom/0.23.1920.977@0.23.1920.977" timestamp="1583844252625" />
+    <state width="1203" height="363" key="GridCell.Tab.0.bottom/0.23.1920.977@0.23.1920.977" timestamp="1583844489970" />
     <state width="1203" height="365" key="GridCell.Tab.0.bottom/0.23.1920.978@0.23.1920.978" timestamp="1583843719522" />
-    <state width="1203" height="363" key="GridCell.Tab.0.center" timestamp="1583844252622">
+    <state width="1203" height="363" key="GridCell.Tab.0.center" timestamp="1583844489970">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state width="1203" height="363" key="GridCell.Tab.0.center/0.23.1920.977@0.23.1920.977" timestamp="1583844252622" />
+    <state width="1203" height="363" key="GridCell.Tab.0.center/0.23.1920.977@0.23.1920.977" timestamp="1583844489970" />
     <state width="1203" height="365" key="GridCell.Tab.0.center/0.23.1920.978@0.23.1920.978" timestamp="1583843719521" />
-    <state width="1203" height="363" key="GridCell.Tab.0.left" timestamp="1583844252621">
+    <state width="1203" height="363" key="GridCell.Tab.0.left" timestamp="1583844489969">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state width="1203" height="363" key="GridCell.Tab.0.left/0.23.1920.977@0.23.1920.977" timestamp="1583844252621" />
+    <state width="1203" height="363" key="GridCell.Tab.0.left/0.23.1920.977@0.23.1920.977" timestamp="1583844489969" />
     <state width="1203" height="365" key="GridCell.Tab.0.left/0.23.1920.978@0.23.1920.978" timestamp="1583843719521" />
-    <state width="1203" height="363" key="GridCell.Tab.0.right" timestamp="1583844252623">
+    <state width="1203" height="363" key="GridCell.Tab.0.right" timestamp="1583844489970">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state width="1203" height="363" key="GridCell.Tab.0.right/0.23.1920.977@0.23.1920.977" timestamp="1583844252623" />
+    <state width="1203" height="363" key="GridCell.Tab.0.right/0.23.1920.977@0.23.1920.977" timestamp="1583844489970" />
     <state width="1203" height="365" key="GridCell.Tab.0.right/0.23.1920.978@0.23.1920.978" timestamp="1583843719522" />
     <state x="643" y="173" key="RollbackChangesDialog" timestamp="1583837872183">
       <screen x="0" y="23" width="1920" height="977" />
