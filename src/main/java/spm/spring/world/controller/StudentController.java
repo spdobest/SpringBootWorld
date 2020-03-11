@@ -16,7 +16,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Controller     // Useful to create the RESTful webservices.
+//@RestController    // Useful to create the RESTful webservices.
+@Controller          // usefulll to create usefull webpages
 public class StudentController {
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
@@ -82,9 +83,13 @@ public class StudentController {
         return new ModelAndView("showStudents", params);
     }
 
-   /* @RequestMapping("/addUpdateStudent")
-    public String addStudent(Model model) {
-        return "addOrUpdateStudent";
-    }*/
+    @RequestMapping("/allStudents")
+    public List<Student> getAllStudents() {
+        return service.getAll();
+    }
 
+    @RequestMapping("/employees")
+    public List<Student> getAllEmployee() {
+        return service.getAll();
+    }
 }
