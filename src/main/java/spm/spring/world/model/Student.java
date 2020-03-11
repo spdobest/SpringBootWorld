@@ -7,11 +7,11 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Table(name = "student")
 public class Student {
- 
+
     // @Id annotation specifies the primary key of an entity.
     // @GeneratedValue provides the generation strategy specification for the primary key values.
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int studentId;
     @NotNull
     private String studentName;
@@ -30,6 +30,10 @@ public class Student {
         return studentName;
     }
 
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -38,10 +42,6 @@ public class Student {
                 ", studentAge=" + studentAge +
                 ", studentEmail='" + studentEmail + '\'' +
                 '}';
-    }
-
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
     }
 
     public int getStudentAge() {

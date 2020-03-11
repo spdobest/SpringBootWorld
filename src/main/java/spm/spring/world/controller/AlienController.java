@@ -14,25 +14,22 @@ import java.util.List;
 
 
 @Controller
-public class AlienController
-{
+public class AlienController {
 	@Autowired
 	AlienService repo;
 
 	@RequestMapping("/hello")
-	public String home1(){
+	public String home1() {
 		return "Hello World!";
 	}
 
 	@RequestMapping("/")
-	public String home()
-	{
+	public String home() {
 		return "home";
 	}
 
 	@RequestMapping("/addAlien")
-	public String addAlien(Alien alien)
-	{
+	public String addAlien(Alien alien) {
 		repo.save(alien);
 		return "home";
 	}

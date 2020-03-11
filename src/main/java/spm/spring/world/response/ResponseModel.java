@@ -2,6 +2,7 @@ package spm.spring.world.response;
 
 public class ResponseModel {
     private int requestCode;
+    private String responseMessage;
 
     public int getRequestCode() {
         return requestCode;
@@ -18,6 +19,4 @@ public class ResponseModel {
     public void setResponseMessage(String responseMessage) {
         this.responseMessage = responseMessage;
     }
-
-    private String responseMessage;
 }

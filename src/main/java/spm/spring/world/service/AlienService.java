@@ -3,9 +3,7 @@ package spm.spring.world.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import spm.spring.world.model.Alien;
-import spm.spring.world.model.Student;
 import spm.spring.world.repository.AlienRepo;
-import spm.spring.world.repository.StudentRepository;
 
 import java.util.ArrayList;
 import java.util.List;

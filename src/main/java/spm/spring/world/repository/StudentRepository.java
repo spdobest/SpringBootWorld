@@ -6,6 +6,6 @@ import spm.spring.world.model.Student;
 
 
 @Repository
-public interface StudentRepository extends CrudRepository<Student, Integer>{
- 
+public interface StudentRepository extends CrudRepository<Student, Integer> {
+
 }
