@@ -16,8 +16,17 @@ public class StudentService {
     StudentRepository repository;
  
     // Save student entity in the h2 database.
-    public void save(final Student student) {
-        repository.save(student);
+    public Student save(final Student student) {
+        Student st = null;
+        if(student!=null){
+            if(student.getStudentAge() == 0 && student.getStudentName() == null && student.getStudentEmail() == null){
+                st = null;
+            }
+            else{
+                st =  repository.save(student);
+            }
+        }
+        return  st;
     }
  
     // Get all students from the h2 database.

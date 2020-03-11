@@ -1,21 +1,25 @@
 package spm.spring.world.controller;
 
+import java.util.HashMap;
 import java.util.List;
- 
+import java.util.Map;
+
 import javax.validation.Valid;
  
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
- 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+import org.springframework.web.servlet.ModelAndView;
+import spm.spring.world.model.City;
 import spm.spring.world.model.Student;
+import spm.spring.world.response.ResponseModel;
 import spm.spring.world.service.StudentService;
  
-@RestController     // Useful to create the RESTful webservices.
+@Controller     // Useful to create the RESTful webservices.
 public class StudentController {
  
     private final Logger log = LoggerFactory.getLogger(this.getClass()); 
@@ -32,7 +36,7 @@ public class StudentController {
     public int save(final @RequestBody @Valid Student student) {
         log.info("Saving student details in the database.");
         service.save(student);
-        return student.getId();
+        return student.getStudentId();
     }
  
     // Get all students from the h2 database.
@@ -42,4 +46,49 @@ public class StudentController {
         log.info("Getting student details from the database.");
         return service.getAll();
     }
+
+    // FOR FORM
+    @RequestMapping("/addStudent")
+    public String formGet(Model model) {
+        return "addOrUpdateStudent";
+    }
+
+
+     @PostMapping(path = "/addUpdateStudent", consumes = "application/json", produces = "application/json")
+     @ResponseBody
+     public ResponseModel formPost(@RequestBody Student student, Model model) {
+        model.addAttribute("student", student);
+        System.out.println(student.toString());
+        Student stu = service.save(student);
+        ResponseModel responseModel = new ResponseModel();
+        if(stu == null){
+            responseModel.setRequestCode(400);
+            responseModel.setResponseMessage("Error Saving Object");
+        }
+        else{
+            responseModel.setRequestCode(200);
+            responseModel.setResponseMessage("Student Added Successfully");
+        }
+        return responseModel;
+    }
+
+
+    @RequestMapping("/students")
+    public ModelAndView showStudents() {
+
+        List<Student> students = service.getAll();
+        System.out.println("inside cities " + students.size());
+        Map<String, Object> params = new HashMap<>();
+
+        params.put("students", students);
+        System.out.println("inside cities ");
+
+        return new ModelAndView("showStudents", params);
+    }
+
+   /* @RequestMapping("/addUpdateStudent")
+    public String addStudent(Model model) {
+        return "addOrUpdateStudent";
+    }*/
+
 }

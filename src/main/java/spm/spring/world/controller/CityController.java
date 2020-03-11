@@ -23,17 +23,17 @@ public class CityController {
         return "index";
     }
 
+    @RequestMapping("/addCity")
+    public String addCity(Model model) {
+        return "addOrUpdateCity";
+    }
+
     @RequestMapping("/cities")
     public ModelAndView showCities() {
 
         List<City> cities = cityService.findAll();
         System.out.println("inside cities " + cities.size());
         Map<String, Object> params = new HashMap<>();
-
-//        ModelAndView modelAndView = new ModelAndView("showCities");
-//        modelAndView.addObject("cities", cities);
-//        return modelAndView;
-
 
         params.put("cities", cities);
         System.out.println("inside cities ");
