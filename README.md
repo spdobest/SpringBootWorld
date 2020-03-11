@@ -130,6 +130,8 @@ public class SpringBootApp{
 }
 ```  
 **FOR MORE DETAILS https://www.java67.com/2019/04/top-10-spring-mvc-and-rest-annotations-examples-java.html#ixzz6GOE3Vp2B**
+  
+    
 **Model, ModelMap, ModelAndView**  
 Model, ModelMap, and ModelAndView are used to define a model in a Spring MVC application. Model defines a holder for model attributes and is primarily designed for adding attributes to the model. ModelMap is an extension of Model with the ability to store attributes in a map and chain method calls. ModelAndView is a holder for a model and a view; it allows to return both model and view in one return value.  
   
