@@ -206,7 +206,14 @@ If we have a Thymeleaf template file targeted by our controller's methods as the
 **@Autowired -** marks a constructor, field, or setter method to be autowired by Spring dependency injection.  
 **@SpringBootApplication -** enables Spring Boot autoconfiguration and component scanning.  
 **@Component** is a generic stereotype for a Spring managed component. It turns the class into a Spring bean at the auto-scan time. Classes decorated with this annotation are considered as candidates for auto-detection when using annotation-based   configuration and classpath scanning.   
-**@Repository, @Service, and @Controller** are specializations of @Component for more specific use cases.  
+**@Repository, @Service, and @Controller** are specializations of @Component for more specific use cases. 
+**@Target(ElementType.TYPE)**   
+**@Retention(RetentionPolicy.RUNTIME)**
+**@Documented**  
+**@Inherited**   
+**@Configuration**   
+**@EnableAutoConfiguration**   
+**@ComponentScan**   
   
 There are also Hibernate **@Entity, @Table, @Id, and @GeneratedValue** annotations in the example.  
   
