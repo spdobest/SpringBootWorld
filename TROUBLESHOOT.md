@@ -17,4 +17,9 @@ spring.datasource.url=jdbc:h2:mem:spmDatabase
 ```   
 put **jdbc:h2:mem:spmDatabase** in JSBC URL.  
   
+3.When hitting a url, instead of showing the webpage if it show page name, then there must be mistake in the path defined in aplication.properties or you have mentioned @RestController instead of @COntroller.   
+**Solution** - check for the application.properties file and set the path properly and check the annotation of the controller.   
+  
+4.
+  
   
