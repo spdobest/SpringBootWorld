@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import spm.spring.world.model.Student;
+import spm.spring.world.model.StudentParent;
 import spm.spring.world.response.ResponseModel;
 import spm.spring.world.service.StudentService;
 
@@ -29,6 +30,7 @@ public class StudentRestController {
     // @PostMapping annotation handles the http post request matched with the given uri.
     // @RequestBody annotation binds the http request body to the domain object.
     // @Valid annotation validates a model after binding the user input to it.
+    // http://localhost:8080/student/saveStudent
     @PostMapping(value = "/student/saveStudent")
     public int save(final @RequestBody @Valid Student student) {
         log.info("Saving student details in the database.");
@@ -62,8 +64,19 @@ public class StudentRestController {
         return responseModel;
     }
 
+    //    http://localhost:8080/allStudents
     @RequestMapping("/allStudents")
     public List<Student> getAllStudents() {
         return service.getAll();
+    }
+
+    // http://localhost:8080/allStudentsWithData
+    @RequestMapping("/allStudentsWithData")
+    public StudentParent getAllStudentsWithData() {
+        StudentParent studentParent = new StudentParent();
+        studentParent.setData(service.getAll());
+        studentParent.setResponseCode(200);
+        studentParent.setResponseMessage("Success");
+        return studentParent;
     }
 }

@@ -87,4 +87,14 @@ public class StudentController {
 
         return new ModelAndView("showStudents", params);
     }
+
+    /**
+     * We can use like this below
+     * @return
+     */
+   /* @RequestMapping("/")
+    @ResponseBody
+    public String getHomePage(){
+        return "index";
+    }*/
 }
