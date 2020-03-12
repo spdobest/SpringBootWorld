@@ -15,6 +15,7 @@ public class UserController {
 
     private UserService userService;
 
+    // http://localhost:8080/user/allUser
     // Get all students from the h2 database.
     // @GetMapping annotation handles the http get request matched with the given uri.
     @GetMapping(value = "/user/allUser", produces = "application/vnd.jcg.api.v1+json")
