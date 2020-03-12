@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b007e96b-e3d8-4e97-8429-8aa71d5e025b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DOCS/springboot_microservices.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MICROSERVICES.md" afterDir="false" />
+    <list default="true" id="b007e96b-e3d8-4e97-8429-8aa71d5e025b" name="Default Changelist" comment="added microservices read me file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,12 +13,13 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="SpringBootRestApiBasics" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
@@ -79,13 +78,57 @@
       <option name="presentableId" value="Default" />
       <updated>1583684582385</updated>
     </task>
+    <task id="LOCAL-00001" summary="added microservices read me file">
+      <created>1584033704237</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584033704237</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="added microservices read me file" />
+    <option name="LAST_COMMIT_MESSAGE" value="added microservices read me file" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="564" y="191" key="CommitChangelistDialog2" timestamp="1584033748501">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="564" y="191" key="CommitChangelistDialog2/0.23.1920.977@0.23.1920.977" timestamp="1584033748501" />
+    <state width="1206" height="263" key="GridCell.Tab.0.bottom" timestamp="1584033763521">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="1206" height="263" key="GridCell.Tab.0.bottom/0.23.1920.977@0.23.1920.977" timestamp="1584033763521" />
+    <state width="1206" height="263" key="GridCell.Tab.0.center" timestamp="1584033763521">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="1206" height="263" key="GridCell.Tab.0.center/0.23.1920.977@0.23.1920.977" timestamp="1584033763521" />
+    <state width="1206" height="263" key="GridCell.Tab.0.left" timestamp="1584033763520">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="1206" height="263" key="GridCell.Tab.0.left/0.23.1920.977@0.23.1920.977" timestamp="1584033763520" />
+    <state width="1206" height="263" key="GridCell.Tab.0.right" timestamp="1584033763521">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="1206" height="263" key="GridCell.Tab.0.right/0.23.1920.977@0.23.1920.977" timestamp="1584033763521" />
     <state x="680" y="306" key="RollbackChangesDialog" timestamp="1584031565451">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="680" y="306" key="RollbackChangesDialog/0.23.1920.977@0.23.1920.977" timestamp="1584031565451" />
+    <state x="530" y="328" key="Vcs.Push.Dialog.v2" timestamp="1584033755404">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="530" y="328" key="Vcs.Push.Dialog.v2/0.23.1920.977@0.23.1920.977" timestamp="1584033755404" />
+    <state x="727" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584033723396">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="727" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.977@0.23.1920.977" timestamp="1584033723396" />
   </component>
   <component name="masterDetails">
     <states>
