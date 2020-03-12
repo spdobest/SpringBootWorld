@@ -26,3 +26,8 @@ insert into student values (106,34,'sarika@gmail.com','sarika');
 insert into student values (107,27,'nidhi@gmail.com','Nidhi');
 insert into student values (108,30,'abhishek@gmail.com','Abhishek');
 insert into student values (109,23,'suresh@gmail.com','Suresh');
+
+insert into user values (101,'siba1','siba1@gmail.com','16236514263512');
+insert into user values (102,'siba2','siba2@gmail.com','16236514263512');
+insert into user values (103,'siba3','siba3@gmail.com','16236514263512');
+insert into user values (104,'siba4','siba4@gmail.com','16236514263512');

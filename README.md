@@ -98,4 +98,26 @@ spring.h2.console.settings.web-allow-others=false
 ```  
  
 ## https://howtodoinjava.com/spring-boot2/h2-database-example/ 
+  
+## lombok in Spring boot  
+**For More details : https://springframework.guru/spring-boot-with-lombok-part-1/**     
+**@Data  
+@Value  
+@NoArgsConstructor  
+@AllArgsConstructor   
+@RequiredArgsConstructor  
+@Getter  
+@Setter  
+@NotNull  
+val and var**
+ ```  
+<dependency>
+   <groupId>org.projectlombok</groupId>
+   <artifactId>lombok</artifactId>
+   <version>1.18.8</version>
+   <scope>provided</scope>
+</dependency>
+```  
+ 
+
 
