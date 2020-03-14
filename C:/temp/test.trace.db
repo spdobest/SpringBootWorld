@@ -1,3 +1,0 @@
-2020-03-10 15:38:59 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ALIEN" not found; SQL statement:
-insert into alien (name, id) values (?, ?) [42102-200]
