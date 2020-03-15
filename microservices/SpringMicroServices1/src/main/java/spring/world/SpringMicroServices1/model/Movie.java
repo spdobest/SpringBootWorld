@@ -1,4 +1,4 @@
-package spring.world.SpringMicroServices2.model;
+package spring.world.SpringMicroServices1.model;
 
 public class Movie {
     private int movieId;
@@ -20,10 +20,9 @@ public class Movie {
         return movieId;
     }
 
-    public Movie(int movieId, String movieName,String movieDesc) {
+    public Movie(int movieId, String movieName) {
         this.movieId = movieId;
         this.movieName = movieName;
-        this.movieDesc = movieDesc;
     }
 
     public void setMovieId(int movieId) {

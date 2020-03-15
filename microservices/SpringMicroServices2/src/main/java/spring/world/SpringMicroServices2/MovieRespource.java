@@ -13,8 +13,6 @@ import java.util.List;
 public class MovieRespource {
     @RequestMapping("/{movieId}")
     public Movie getMovieInfo(String movieId){
-
-            return    new Movie(1,"Porsuit of Happiness");
-
+            return    new Movie(1,"Porsuit of Happiness","Movie Desc");
     }
 }

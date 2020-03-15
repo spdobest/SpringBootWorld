@@ -1,13 +1,29 @@
 package spring.world.SpringMicroServices3.model;
 
 public class Rating {
+
+    private int movieID;
+
     private int rating;
+
+
+    public Rating() {
+        super();
+    }
 
     public int getRating() {
         return rating;
     }
 
-    public Rating(String movieName,int rating) {
+    public int getMovieID() {
+        return movieID;
+    }
+
+    public void setMovieID(int movieID) {
+        this.movieID = movieID;
+    }
+
+    public Rating(String movieName, int rating) {
         this.rating = rating;
         this.movieName = movieName;
     }
