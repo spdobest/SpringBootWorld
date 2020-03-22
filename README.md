@@ -115,4 +115,87 @@
    - Method: GET
    -URI: https://localhost:8080/users
 - Test And Verify getAllUsers RESTful service    
+  
+## STEP 9 - Implement CreateUser Method in Service & Controller Layers  
+- Service Layer:
+    - Implement CreateUser Method  
+- Controller Layer
+    - Implement CreateUser Method
+        - @RequestBody Annotation
+    - Add @PostMapping Annotation to createUser Method    
+- POSTMAN: Verify the createUser RESTful Service in postman REST
+    - Create a request for CreateUser
+        - Body (select Raw)
+        - Content Type: JSON (application/json)
+        - Method: POST
+   - Test Using Postman  
+    
+## STEP 10 - Implement getUserById Method in Service & Controller Layers  
+- Service Layer:
+    - Implement CreateUser Method  
+- Controller Layer
+    - Implement getUserById Method
+    - Discuss about return type Optional Object
+- Controller Layer:  
+    - Create getUserById method and apply optional return type
+    - @PathVariable Annotation
+    - Annotate @GetMapping for getUserById Method
+    - URI: /users/{id}  
+- POSTMAN: Create and Verify the getUserById RESTful Service in postman REST 
+    - Method: GET
+   - URL: http://localhost:8080/users/{id} 
+   - URL: http://localhost:8080/users/{102}  
+  
+## STEP 11 - Implement updateUserById Method in Service & Controller Layers  
+- Service Layer:
+    - Create updateUserById Method
+    - Inputs (User, id)  
+- Controller Layer
+    - Create updateUserById Method
+    - @PathVariable
+    - @RequestBody
+    - Annotate @PutMaping for updateUserById Method
+- POSTMAN: Verify the updateUserById RESTful Service in postman REST   
+    - Create a Request for updateUserById
+    - Body (select raw)
+    - Content Type: JSON ( application/json )
+    - Method: POST
+    - URL: http://localhost:8080/users/{id} 
+    - URL: http://localhost:8080/users/{102}   
+    - Test Using PostMan  
+## STEP 12 - Implement deleteUserById Method in Service & Controller Layers  
+- Service Layer:
+    - Create deleteUserById Method
+    - Verify user exists and then delete it  
+- Controller Layer
+    - Create deleteUserById Method
+    - @PathVariable Annotation 
+    - Annotate @DeleteMaping for deleteUserById Method
+- POSTMAN: Verify the deleteUserById RESTful Service in postman REST   
+    - Create a Request for deleteUserById 
+    - Content Type: JSON ( application/json )
+    - Method: DELETE
+    - URL: http://localhost:8080/users/{id} 
+    - URL: http://localhost:8080/users/{102}   
+    - Test Using PostMan    
+  
+## STEP 13 - Implement getUserByUserName Method in Repository,Service & Controller Layers  
+- Repository Layer:
+    - Define "findByUserName" in UserRepository Interface
+- Service Layer:
+    - Create getUserByUserName Method
+    - Input as userName (String)  
+- Controller Layer
+    - Create getUserByUserName Method
+    - @PathVariable Annotation 
+    - Annotate @GetMapping for getUserByUserName Method
+    - URI: /users/byusername/{username}
+- POSTMAN: Verify the getUserByUserName RESTful Service in postman REST   
+    - Create a Request for getUserByUserName 
+    - Content Type: JSON ( application/json )
+    - Method: GET
+    - URL: http://localhost:8080/users/{username} 
+    - URL: http://localhost:8080/users/{spm}   
+    - Test Using PostMan         
+                        
                     

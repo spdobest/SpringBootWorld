@@ -6,4 +6,5 @@ import spm.spring.world.entities.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User,Long> {
+    User findByUserName(String username);
 }
