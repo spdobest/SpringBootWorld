@@ -67,13 +67,52 @@
 ```  
   
  ## STEP 4 - Entity Creation (User Entity)
-    - @Entity - 
-    - @Table
-    - Fields or variables( id, username,firstName,lastname,email,role,ssn )  
-    - @Id
-    - @GeneratedValue
-    - @Column (name, length, nullable, unique)
-    - No ARgs Constructor
-    - Fields COnstructor
-    - toString() - override this method
-     
+- @Entity - 
+- @Table
+- Fields or variables( id, username,firstName,lastname,email,role,ssn )  
+- @Id
+- @GeneratedValue
+- @Column (name, length, nullable, unique)
+- No ARgs Constructor
+- Fields COnstructor
+- toString() - override this method
+       
+ ## STEP 5 - H2 database
+- In memory database ( data will be lost when we restart JVM or when JVM reloads)
+- Populate DB during runtime
+- Create data.sql in src/main/resources  
+- NOTE: Columns will be created in Alphabetical order in DB except Primaty Key Id
+- NOTE: SO insert statement values should be in alphabetical order as displayed in H2 database  
+- H2 Console: http://localhost:8080/h2-console
+- JDBC URL : jdbc:h2:mem:testdb  
+      
+**H2 DB Records**  
+  insert into user values(101,'abcd@gmail.com','SIba','Mohanty','Admin','ssn101','sMohanty');  
+  insert into user values(102,'def@gmail.com','Pooja','swain','Wiser','ssn102','pSwain');  
+  insert into user values(103,'xyz@gmail.com','Babu','Lenka','asas','ssn103','bLenka');  
+          
+ ## STEP 6 - Create Repository
+- Create a Interface
+- extends JpaRepository
+- @Repository
+    
+ ## STEP 7 - Implement getAllUsers Method  
+- Service:
+   - Create a UserService Class
+   - Annotate it with @Service
+   - @Autowired (Autwire UserRepository)
+   - Create getAllUsers Method
+- Controller   
+   - Create a UserController Class
+   - Annotate it with @RestController
+   - @Autowired (Autowire UserService)
+   - Create @GetMapping for getAllUsersMethod
+          
+ ## STEP 8 - Test Using REST Client - POSTMAN  
+- Download & Install POSTMAN - https://www.postman.com/
+- Create a Collection "Springboot - BuildingBlocks"
+- Create a request for getAllUsers
+   - Method: GET
+   -URI: https://localhost:8080/users
+- Test And Verify getAllUsers RESTful service    
+                    
