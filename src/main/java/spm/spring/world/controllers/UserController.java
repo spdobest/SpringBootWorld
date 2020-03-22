@@ -51,12 +51,4 @@ public class UserController {
     public String deleteUserByUserId(@PathVariable Long id) {
         return userService.deleteUserByUserId(id);
     }
-
-    // create user method
-    // @PathVariable Annotation
-    // @DeleteMapping Annotation
-    @GetMapping("/users/byusername/{username}")
-    public User getUserByUserName(@PathVariable("username") String username) {
-        return userService.getUserByUserName(username);
-    }
 }
