@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import spm.spring.world.entities.User;
 import spm.spring.world.exceptions.UserExistsException;
+import spm.spring.world.exceptions.UserNameNotFoundException;
 import spm.spring.world.exceptions.UserNotFoundException;
 import spm.spring.world.repository.UserRepository;
 
@@ -60,7 +61,13 @@ public class UserService {
     }
 
     // getUserById Method
-    public User getUserByUserName(String userName) {
-        return userRepository.findByUserName(userName);
+    public User getUserByUserName(String userName) throws UserNameNotFoundException {
+        User user = userRepository.findByUserName(userName);
+        if (user != null) {
+            return userRepository.findByUserName(userName);
+        } else {
+            throw new UserNameNotFoundException("Username " + userName + " not found in the user repository");
+        }
+
     }
 }

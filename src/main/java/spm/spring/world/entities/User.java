@@ -2,6 +2,8 @@ package spm.spring.world.entities;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "user")
@@ -95,9 +97,11 @@ public class User {
     @GeneratedValue
     private Long id;
 
-    @Column(name = "USER_NAME", length = 50, nullable = false,unique = true)
+    @NotEmpty(message = "UserName is Mandatory field. Please Provide username")
+    @Column(name = "USER_NAME", length = 50, nullable = false, unique = true)
     private String userName;
 
+    @Size(min = 2, message = "FirstName should have at least 2 characters")
     @Column(name = "FIRST_NAME", length = 50, nullable = false)
     private String firstName;
 
