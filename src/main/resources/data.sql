@@ -8,3 +8,8 @@ insert into orders values(2003,'order13',101);
 insert into orders values(2004,'order21',102);
 insert into orders values(2005,'order22',102);
 insert into orders values(2006,'order31',103);
+
+insert into employee values(101,'Java','2004-01-22' ,123123,123131,'Siba',1234444);
+insert into employee values(102,'Kotlin','2004-01-22' ,123123,123131,'Prasad',1234444);
+insert into employee values(103,'Javascript','2004-01-22' ,123123,123131,'Mohanty',1234444);
+insert into employee values(104,'Android','2004-01-22' ,123123,123131,'SPM',1234444);

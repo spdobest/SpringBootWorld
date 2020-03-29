@@ -14,6 +14,7 @@ import spm.spring.world.exceptions.UserNameNotFoundException;
 import spm.spring.world.exceptions.UserNotFoundException;
 import spm.spring.world.service.UserService;
 
+import javax.validation.constraints.Min;
 import java.util.List;
 import java.util.Optional;
 
@@ -50,7 +51,7 @@ public class UserController {
     // @PathVariable Annotation
     // @GetMapping Annotation
     @GetMapping("/{id}")
-    public Optional<User> getUserById(@PathVariable Long id) {
+    public Optional<User> getUserById(@PathVariable @Min(1) Long id) {
         try {
             return userService.getUserById(id);
         } catch (UserNotFoundException ex) {
@@ -62,7 +63,7 @@ public class UserController {
     // @PathVariable Annotation
     // @PutMapping Annotation
     @PutMapping("/{id}")
-    public User updateUserByUserId(@PathVariable("id") Long id, @RequestBody User user) {
+    public User updateUserByUserId(@PathVariable("id") @Min(1) Long id, @RequestBody User user) {
         try {
             return userService.updateUserByUserId(id, user);
         } catch (UserNotFoundException ex) {
@@ -75,7 +76,7 @@ public class UserController {
     // @PathVariable Annotation
     // @DeleteMapping Annotation
     @DeleteMapping("/{id}")
-    public String deleteUserByUserId(@PathVariable Long id) {
+    public String deleteUserByUserId(@PathVariable @Min(1) Long id) {
         try {
             return userService.deleteUserByUserId(id);
         } catch (UserNotFoundException ex) {
