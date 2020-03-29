@@ -50,10 +50,9 @@ public class UseHateOasController {
             } catch (UserNotFoundException e) {
                 e.printStackTrace();
             }
-
-
         });
-        CollectionModel<User> finalEntityModel = new CollectionModel(listUser);
+        Link selfLinkgetAllUsers = ControllerLinkBuilder.linkTo(this.getClass()).withSelfRel();
+        CollectionModel<User> finalEntityModel = new CollectionModel(listUser, selfLinkgetAllUsers);
         return finalEntityModel;
     }
 
