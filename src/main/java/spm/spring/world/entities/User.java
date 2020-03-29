@@ -1,8 +1,6 @@
 package spm.spring.world.entities;
 
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonFilter;
 import org.springframework.hateoas.RepresentationModel;
 
 import javax.persistence.*;
@@ -10,7 +8,8 @@ import java.util.List;
 
 @Entity
 @Table(name = "user")
-@JsonIgnoreProperties({"firstName", "lastName"})
+//@JsonIgnoreProperties({"firstName", "lastName"}) - this is Static Filtering @JsonIgnore
+@JsonFilter(value = "userFilter") // this is dynamic filtering
 public class User extends RepresentationModel {
 
     @Id
@@ -33,7 +32,7 @@ public class User extends RepresentationModel {
     private String role;
 
     @Column(name = "SSN", length = 50, nullable = true, unique = true)
-    @JsonIgnore
+//    @JsonIgnore  -- this is static filtering
     private String ssn;
     @OneToMany(mappedBy = "user")
     private List<Order> orders;
