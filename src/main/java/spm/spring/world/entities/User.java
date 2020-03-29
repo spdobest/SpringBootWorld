@@ -1,16 +1,18 @@
 package spm.spring.world.entities;
 
 
+import org.springframework.hateoas.RepresentationModel;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "user")
-public class User {
+public class User extends RepresentationModel {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private Long userId;
 
     @Column(name = "USER_NAME", length = 50, nullable = false, unique = true)
     private String userName;
@@ -54,13 +56,6 @@ public class User {
     }
 
 // GETTERS AND SETTERS
-        public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getUserName() {
         return userName;
@@ -110,16 +105,25 @@ public class User {
         this.ssn = ssn;
     }
 
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
+                "userId=" + userId +
                 ", userName='" + userName + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", emailId='" + emailId + '\'' +
                 ", role='" + role + '\'' +
                 ", ssn='" + ssn + '\'' +
+                ", orders=" + orders +
                 '}';
     }
 }

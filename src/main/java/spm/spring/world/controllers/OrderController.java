@@ -43,7 +43,7 @@ public class OrderController {
         try {
             orderService.createOrder(order, userId);
             HttpHeaders headers = new HttpHeaders();
-            headers.setLocation(builder.path("/users/{userid}/orders").buildAndExpand(order.getUser().getId()).toUri());
+            headers.setLocation(builder.path("/users/{userid}/orders").buildAndExpand(order.getUser().getUserId()).toUri());
             return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
         } catch (OrderExistException ex) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, ex.getMessage());

@@ -24,7 +24,7 @@ public class UserService {
 
     // createUser Method
     public User createUser(User user) throws UserExistsException {
-        Optional<User> userCreate = userRepository.findById(user.getId());
+        Optional<User> userCreate = userRepository.findById(user.getUserId());
         if (userCreate.isPresent()) {
             throw new UserExistsException("User already exist, please check the user id");
         }
@@ -46,7 +46,7 @@ public class UserService {
         if (!updatedUer.isPresent()) {
             throw new UserNotFoundException("User Not found in Repository,Please provide correct user Id");
         }
-        user.setId(id);
+        user.setUserId(id);
         return userRepository.save(user);
     }
 

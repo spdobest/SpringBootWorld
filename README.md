@@ -1,112 +1,105 @@
-# Spring Boot -JPA
-(@OneToMany and @ManyToOne)  
-- In JPA, one-to-many database association can be represented either
-through a @ManyToOne or @OneToMany association or both. All
-depends on our requirement and need.
-- @ManyToOne annotation allows us to map the Foreign Key column
-in the child entity mapping so that child has an entity object
-reference to its parent entity. This is the most effecient way.
-- We can perform the associations in below listed 3 ways
-    - Unidirectional @OneToMany association
-    - Bidirectional @OneToMany association
-    - Unidirectional @ManyToOne with JPQL query
- 
-## Use Case Introduction
-- Get all orders of a user
-    - Method name: getAllOrders
-    - GET /users/{userid}/orders
-- Create an order for a user
-    - Method name: createOrder
-    - GET /users/{userid}/orders
-- Get order details using orderid and userid
-    - Method name: createOrder
-    - GET /users/{userid}/orders/{orderid}
-           
-## JPA - @OneToMany - Implementation Steps
-- Step 01: Create branch for JPA one-to-many    
-- Step 02: Create Order entity and @ManyToOne association
-- Step 03: Update User Entity with @OneToMany Association
-- Step 04: Implement getAllOrders method
-- Step 05: Implement createOrder Method
-- Step 06: Implement getOrderByOrderId method (Assignment)
-- Step 07 - commit and push
-    
-## STEP 02 - Create Order entity and @ManyToOne association
-- Entity Layer  
-    - Create Order Entity
-    - Annotate with @Table(name = "orders")
-    - Add User variable
-    - Add @ManyToOne Mapping
-    - Add Fetch TYpe as lazy
-    - Add @JsonIgnore
-    - Add Getters and Setters
-    - Add NoArgument Constructor
+# Spring Boot - HATEOAS
+NOTE - the video is depricated for hateoas, for depricated classses use below  
+https://stackoverflow.com/questions/25352764/hateoas-methods-not-found
+  
+- HATEOAS is an extra level upon REST
+- It is used to present information about a REST API to a client without
+the need to bring up the API documentation
+- It includes links in a returned response and client can use those API links
+to further communicate with the server.
+- Simplify the client by making the API discoverable.
       
-## STEP 03 - Update User Entity with @OneToMany Association
-- Add Orders variable
-- Add @OneToMany Mapping
-- Add MappedBy to user variable in order Entity
-- Add getters and setters for "orders"
-- src/main/resources
-    - update data.sql    
-        
-**Option#1: Verify Column and create insert query**  
-insert into orders values(2001,''order11',101);  
-insert into orders values(2002,''order12',101);  
-insert into orders values(2003,''order13',101);  
-insert into orders values(2004,''order21',102);  
-insert into orders values(2005,''order22',102);  
-insert into orders values(2006,''order31',103);   
-    
-**Option#2: Verify Foreign key name in DB before creating below insert queries**  
+## Spring Boot HATEOAS  
+- Spring HATEOAS provides 3 abstractions for creating the URI  
+    - Resource Support
+    - Link
+    - ControllerLinkBuilder
+- We can use these to build the API URL's and associate it to the resource.
+- We extend entities( User, Order ) from the Resource Support class to inherit
+the add() method
+- Once we create a link, we can easily associate that link to a resource 
+representation without adding any new fields to the resource or
+without writing huge amount of manual boilerplate code.
   
-insert into orders values(orderid,orderDescription,user_user_id) values(2001,'order11',101);      
-insert into orders values(orderid,orderDescription,user_user_id) values(2002,'order12',101);      
-insert into orders values(orderid,orderDescription,user_user_id) values(2003,'order13',101);      
-insert into orders values(orderid,orderDescription,user_user_id) values(2004,'order21',102);      
-insert into orders values(orderid,orderDescription,user_user_id) values(2005,'order22',102);      
-insert into orders values(orderid,orderDescription,user_user_id) values(2006,'order31',103);      
-   
-## STEP 04 - Implements "getAllOrders" method in OrderController
-- Controller Layer: UserController
-    - Add @RequestMapping at class level and add "/users" context at class level
-    - Remove "/users" at method level for all users related methods
-- Controller Layer: OrderController
+## Spring Boot - HATEOAS implementation steps
+- STEP 00: Create git branch for Spring Boot HATEOAS
+- STEP 01: Add HATEOAS dependency in pom.xml
+- STEP 02: Extends both Entities(user,order) to ResourceSupport
+- STEP 03: Create new User and Order controllers for HATEOAS implementation
+    - UserHateOasController
+    - OrderHateOasController 
+- STEP 04: Implement self link in getUserById method
+- STEP 05: Implement self and relationship links in getAllUsers Method.
+Relationship link will be with getAllOrders method.
+    - (A) - Self Link for each user
+    - (B) - Relationship link with getAllOrders
+    - (C) - Self Link for getAllUsers
+- STEP 06: GIT commit code  
+  
+## STEP 01: Add Dependency in pom.xml
+- Add dependency in pom.xml (spring-boot-starter-hateoas)
+- Restart SpringBootApp ( to reflect new dependency changes - new jar added )   
+  
+## STEP 02: Extend both Entities to ResourceSupport
+- Entity Layer
+    - User extends ResourceSupport
+    - Order extends ResourceSupport
+  
+## STEP 03: Create new User and Order Controllers for HATEOAS implementation
+- UserHateOasController
+    - Create new class UseHateOasController
     - Annotate with @RestController
-    - Annotate with @RequestMapping
-    - Method: getAllOrders
-    - GET /users/{userid}/orders
-- Test Using Postman
-    - Test#1: getAllOrders
-        - GET /users/101/orders
-    - Test#2: getAllUsers
-        - GET /users
-    - Test#3: getUserById
-        - GET /users/101
+    - Annotate with @RequestMapping(value="hateoas/users")
+    - Annotate with @Validated
+    - Autowire Repositories ( UserRepository )
+    - Copy Methods getUserById, getAllUsers from UserController
+- OrderHateOasController
+    - Create new class OrderHateOasController
+    - Annotate with @RestController
+    - Annotate with @RequestMapping(value="hateoas/users")
+    - Annotate with @Validated
+    - Autowire Repositories ( UserRepository,OrderRepository )
+    - Copy Methods getAllOrders from OrderController    
+- Test with POSTMAN
+    - getUserById
+        - GET /hateoas/users/{userid}
+    - getAllUsers
+        - GET /hateoas/users/{userid}
+    - getAllOrders
+        - GET /hateoas/users/{userid}/orders    
   
-## STEP 05 - Implements "createOrder" method in OrderController   
-- Repository Layer
-    - Create OrderRepository
-- Controller Layer: OrderController
-    - Method: createOrder
-    - POST: /users/{userid}/orders
+## STEP 04: Implement self link in getUserById Method
+- UserHateOasController  
+    - getUserById - self Linking
+    - Method: getUserById
+        - Extract UserId
+        - Create Link using ControllerLinkBuilder
+        - Add Link to Resource<User> ( Return type changed to Resource )
 - Test Using POSTMAN
-    - Test#1: createOrder
-        - POST users/101/order
-    - Test#2: getALlOrder
-        - GET users/101/orders            
-    - Test#3: getAllUsers
-        - GET /users 
-    - Test#1: createOrder
-        - GET /users/101 
-
+    - Method: getUserById
+    - GET /hateoas/users/{userid}  
   
-## STEP 06 - Implements "getOrderByOrderId" method in OrderController   
-- Controller Layer: OrderController
-    - Method: getOrderByOrderId
-    - GET: /users/{userid}/orders/{orderId}
+## STEP 05: Implement self and relationship links in getAllUsers Method in UserHateoasController
+- 5(A) Self Link for each user in a for loop
+    - UserHateOasController
+    - Method: getAllUsers
+    - HATEOAS: implement self linking for each user
+        - For Loop
+        - Extract User
+        - Create Link with ControllerLinkBuilder
+        - Add Link
+        - Change Return Type from List<User> to EntityModel<User>  
 - Test Using POSTMAN
-    - Test#1: getOrderByOrderId
-        - GET users/{userId}}/orders/{orderId}
-
-        
+    - Method: getAllUsers
+    - GET /hateoas/users
+- 5(B) Relationship Link  with getAllOrders
+    - UserHateOasController & OrderHateOasController
+    - Method: getAllUsers
+    - HATEOAS: implement relationship linking getAllOrders
+    - OrderHateOasController
+        - Change getAllOrders method return type to EntityModel<Order> from List<Order>
+    - UserHateOasController
+        -  
+- Test Using POSTMAN
+    - Method: getAllUsers
+    - GET /hateoas/users   
