@@ -10,17 +10,17 @@ import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 import java.util.Locale;
 
 @SpringBootApplication
-public class SpringbootDtoMapStructApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(SpringbootDtoMapStructApplication.class, args);
-	}
+public class SpringbootApiVersioningApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootApiVersioningApplication.class, args);
+    }
 
-	@Bean
-	public LocaleResolver localeResolver() {
-		AcceptHeaderLocaleResolver localeResolver = new AcceptHeaderLocaleResolver();
-		localeResolver.setDefaultLocale(Locale.US);
-		return localeResolver;
-	}
+    @Bean
+    public LocaleResolver localeResolver() {
+        AcceptHeaderLocaleResolver localeResolver = new AcceptHeaderLocaleResolver();
+        localeResolver.setDefaultLocale(Locale.US);
+        return localeResolver;
+    }
 
 	@Bean
 	public ResourceBundleMessageSource messageSource() {
