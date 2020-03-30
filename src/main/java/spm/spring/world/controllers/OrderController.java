@@ -13,7 +13,7 @@ import spm.spring.world.exceptions.OrderExistException;
 import spm.spring.world.exceptions.OrderNotFoundException;
 import spm.spring.world.exceptions.UserNotFoundException;
 import spm.spring.world.repository.UserRepository;
-import spm.spring.world.service.OrderService;
+import spm.spring.world.restservice.OrderService;
 
 import java.util.List;
 import java.util.Optional;

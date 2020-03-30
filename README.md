@@ -1,9 +1,95 @@
-# Spring Boot - DTOs - Data Transfer Objects
-- DTOs Stands for Data Transfer Objects
-- Exposing entity objects through REST endpoints can mount security issues provided if we dont
-take enough care about which entity fields should be made available for publicly exposed REST
-API.
-- ModelMapper is a library which supports to convert entity objects to DTOs and DTOs to entity Object
+# Spring Boot - MapStruct
+- MapStruct is a code generator that simplifies bean mappings
+- Mapping classes are generated during compilation and no runtime processing or
+reflection is used.
+- Mapping classes use simple method invocation, which makes them really easy to 
+debug.
+- we generally notice a lot of boilerplate code converting POJOs to other POJOs.
+- Very common type of conversion we see regularly is in between persistence-backed entities and DTOs that go out the client side
+- The problem that MapStruct solves is it can generate bean mapper classes
+automatically. If we go by implementing them manually, creating bean mappers is time consuming
+- MapStruct also requires a processor plugin to be added
+to pom.xml. The mapstruct-processor is used to generate the mapper 
+implementation during build phase.
+  
+## MapStruct Implementation Steps
+- Step-01: Create new GIT branch using IDE
+- Step-02: Update pom.xml with necessary dependencies for MapStruct
+- Step-03: Create UserMsDTO class required for MapStruct Implementation
+- Step-04: Create the MapStruct Mapper Interface
+- Step-05: Create the REST services by calling methods defined in
+MapStruct Mapper
+- Step-06: Commit and push the Code to remote repository
+  
+## DETAIL STEPS TO IMPLEMENT MAPSTRUCT
+- Step-01: NEW GIT BRANCH
+    - git branch name: Udemy-Springboot10-02-DTOS-MapStruct
+    - Create new local branch  
+- Step-02: Update pom.xml with necessary dependencies forMapStruct
+    - Change#1
+         ```
+        <properties>
+            <org.mapstruct.version>1.3.0.Final</org.mapstruct.version>
+            <org.apache.maven.plugins.version>3.8.0</org.apache.maven.plugins.version>
+      </properties>
+       ```  
+    - Change#2: Add MapStruct Dependency      
+       ```
+       <!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
+       <dependency>
+           <groupId>org.mapstruct</groupId>
+           <artifactId>mapstruct-jdk8</artifactId>
+           <version>${org.mapstruct.version}</version>
+       </dependency>
+        ```      
+    - Change3: Add MapStruct Processor Plugin
+        ```
+    <plugin>
+    		<groupId>org.apache.maven.plugins</groupId>
+    		<artifactId>maven-compiler-plugin</artifactId>
+    		<version>${org.apache.maven.plugins.version}</version>
+    		<configuration>
+    			<source>${java.version}</source>
+    			<target>${java.version}</target>
+    			<annotationProcessorPaths>
+    				<path>
+    					<groupId>org.mapstruct</groupId>
+    					<artifactId>mapstruct-processor</artifactId>
+    					<version>${org.mapstruct.version}</version>
+    				</path>
+    			</annotationProcessorPaths>
+    		</configuration>
+    	</plugin>
+     ``` 
+- Step-03:  Create UserMsDTO class required for MapStruct Implementation.
+    - DTO Layer
+        - Create UserMsDto in dtos package
+        - Define fields that need to be exposed via UserMsDto
+        - Generate No Argument and Field Constructor
+- Step-04: Create the MapStruct Mapper Interface
+    - Create an interface with methods for mapping between objects (User to UserMsDto) 
+    - Add @Mapper annotation to the interface
+    - Add a 'commentModel' attribute with the value of 'spring' to the @Mapper annotation
+    - Create Methods
+        - userToUserDto
+            - Input Object: User
+            - Output Object: UserMsDto
+            - @Mapping(source ="email",target="emailaddress")
+        - userToUserDtos
+             - Input Object: List<User>
+             - Output Object: List<UserMsDto> 
+- Step-05: Create the REST services by calling methods defined in MapStruct Mapper.
+    - Controller Layer
+        - Create new Controller named UserMapStructController
+        - Copy getUserById and getAllUsers methods from UserController
+        - Test
+    - getUserByIdMsDtos
+        - Implement this method to return DTO converted by MapStruct
+        - Test  
+- Step-06: Commit and Push Code to remote repository  
+- Step-01:  
+- Step-01:  
+
 - Intelligent
     - No manual mapping needed
     - Automatically projects and flattens complex models.

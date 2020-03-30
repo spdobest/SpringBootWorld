@@ -12,7 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 import spm.spring.world.entities.User;
 import spm.spring.world.entities.Views;
 import spm.spring.world.exceptions.UserNotFoundException;
-import spm.spring.world.service.UserService;
+import spm.spring.world.restservice.UserService;
 
 import javax.validation.constraints.Min;
 import java.util.Optional;

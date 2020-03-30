@@ -13,7 +13,7 @@ import spm.spring.world.entities.Employee;
 import spm.spring.world.entities.EmployeeViews;
 import spm.spring.world.exceptions.EmployeeExistsException;
 import spm.spring.world.exceptions.EmployeeNotFoundException;
-import spm.spring.world.service.EmployeeService;
+import spm.spring.world.restservice.EmployeeService;
 
 import javax.validation.constraints.Min;
 import java.util.List;

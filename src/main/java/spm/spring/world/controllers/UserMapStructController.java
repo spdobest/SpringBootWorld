@@ -1,6 +1,5 @@
 package spm.spring.world.controllers;
 
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,32 +7,33 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
-import spm.spring.world.dtos.UserMmDto;
+import spm.spring.world.dtos.UserMsDto;
 import spm.spring.world.entities.User;
 import spm.spring.world.exceptions.UserNotFoundException;
-import spm.spring.world.restservice.UserService;
+import spm.spring.world.repository.UserRepository;
+import spm.spring.world.restservice.mappers.UserMapper;
 
 import javax.validation.constraints.Min;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/modelmapper/users")
-public class UserModelMapperController {
+@RequestMapping("/mapstruct/users")
+public class UserMapStructController {
 
     @Autowired
-    private UserService userService;
+    private UserRepository userRepository;
 
     @Autowired
-    private ModelMapper modelMapper;
+    private UserMapper userMapper;
+
+    @GetMapping
+    public List<UserMsDto> getAllUserDtos(){
+        return userMapper.usersToUserDtos(userRepository.findAll());
+    }
 
     @GetMapping("/{id}")
-    private UserMmDto getUserDtoById(@PathVariable("id") @Min(1) Long id) throws UserNotFoundException {
-        Optional<User> optionalUser = userService.getUserById(id);
-        if (!optionalUser.isPresent()) {
-            throw new UserNotFoundException("User Not found");
-        }
-        User user = optionalUser.get();
-        UserMmDto userMmDto = modelMapper.map(user, UserMmDto.class);
-        return userMmDto;
+    public UserMsDto getUserMsDtoById(@PathVariable @Min(1) Long id) {
+            return userMapper.userToUserMsDto(userRepository.findById(id).get());
     }
 }

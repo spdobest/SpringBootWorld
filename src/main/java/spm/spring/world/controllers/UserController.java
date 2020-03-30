@@ -12,7 +12,7 @@ import spm.spring.world.entities.User;
 import spm.spring.world.exceptions.UserExistsException;
 import spm.spring.world.exceptions.UserNameNotFoundException;
 import spm.spring.world.exceptions.UserNotFoundException;
-import spm.spring.world.service.UserService;
+import spm.spring.world.restservice.UserService;
 
 import javax.validation.constraints.Min;
 import java.util.List;
@@ -69,7 +69,6 @@ public class UserController {
         } catch (UserNotFoundException ex) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, ex.getMessage());
         }
-
     }
 
     // create user method

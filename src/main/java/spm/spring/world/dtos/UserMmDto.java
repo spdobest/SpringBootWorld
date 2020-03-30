@@ -1,4 +1,4 @@
-package spm.spring.world.dto;
+package spm.spring.world.dtos;
 
 import spm.spring.world.entities.Order;
 

@@ -1,4 +1,4 @@
-package spm.spring.world.service;
+package spm.spring.world.restservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

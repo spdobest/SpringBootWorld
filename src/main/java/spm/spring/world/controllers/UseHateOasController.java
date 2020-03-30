@@ -16,7 +16,7 @@ import spm.spring.world.entities.Order;
 import spm.spring.world.entities.User;
 import spm.spring.world.exceptions.UserNotFoundException;
 import spm.spring.world.repository.UserRepository;
-import spm.spring.world.service.UserService;
+import spm.spring.world.restservice.UserService;
 
 import java.util.List;
 import java.util.Optional;
