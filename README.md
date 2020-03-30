@@ -1,44 +1,77 @@
-# Spring Boot - Dynamic Filtering
-## JSON View
-- @JsonView is used to customize views
-- Applied at field level in a model class to categorize which field belongs to which view
-- Applied at service level in a controller, so that for that respective
-REST service, view defined in @JsonView will be applicable
-- Will be very useful if we have a single entity or model which need to 
-be provided with different views to different category of clients.
-- Course Example: User & Order Management 
-    - We have a user entity defined with fields (userid,username,firstname,lastname
-    email,role,ssn,orders)
-    - Consider we need to present data in 2 view patterns
-        - External View: userid,username,firstname,lastname,email
-        - Internal View: userid, username,firstname,lastname,email,role,ssn,orders
-- Classic Example: Employee Management.(Assignment)
-    - We have employee data( empid,name,department,logintime,logoutTime,salary,lastPromotionDate)
-    - Consider we need to present employee data in 3 views
-        - Normal View: empid, name, department  
-        - Manager View: empid, name, department,loginTime, logoutTime  
-        - HR View: empid, name, department, salary, lastPromotionDate
+# Spring Boot - DTOs - Data Transfer Objects
+- DTOs Stands for Data Transfer Objects
+- Exposing entity objects through REST endpoints can mount security issues provided if we dont
+take enough care about which entity fields should be made available for publicly exposed REST
+API.
+- ModelMapper is a library which supports to convert entity objects to DTOs and DTOs to entity Object
+- Intelligent
+    - No manual mapping needed
+    - Automatically projects and flattens complex models.
+- Refactoring Safe
+    - It provides a simple fluent API for handling special use cases
+    - The API is type safe and refactoring safe
+- Convention Based 
+    - ModelMapper provides predefined conventions and if user is in need can create
+    custom conventions.
+- Extensible
+    - ModelMapper supports integrations with any type of data model. In short ModelMapper
+    does the heavy lifting for us.
+- Reference
+    - http://modelmapper.ord/
+    - http://modelmapper.org/getting-started
   
-## Implementation Steps
+## Model Mapper Implementation Steps
+- Step-01: Create new GIT branch using IDE
+- Step-02: Add Model Mapper dependency in pom.xml      
+- Step-03: Define Model Mapper bean in APpConfig       
+- Step-04: DTO Layer: Create DTO with name as UserMmDTO.      
+- Step-05: Controller Layer : Create getUserDtoById method with Entity
+to DTO conversion logic with Model Mapper in a new controller UserModelMapperController     
+- Step-06: Commit and Push Code  
+
+## STEPS in more details way
 - Step 00: Introduction
-- Step 01: New GIT branch
-    - git Branch name: Udemy-Springboot9-3-Filtering-JsonView
-    - create new local branch
-- Step 02: @JsonView
-    - Entity Layer
-        - Create a class named Views
-            - Create two static classes View (External, Internal)
-        - Annotate fields in User Entity with @JsonVIew
-        - Decide which fields should be external and internal and annotate accordingly.
+- Step 01: New Git Branch
+    - git Branch Name:Udemy-Springboot10-01-DTOS-ModelMapper
+    - create new branch and upstream to git
+- Step 02: Implement DTOS for user Entity using ModelMapper
+    - Update pom.xml
+    ```
+        <!-- https://mvnrepository.com/artifact/org.modelmapper/modelmapper -->
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>2.3.6</version>
+        </dependency>
+   ```   
+- Step 03: Define ModelMapper Bean
+    - Config layer
+        - Create a config package
+        - Create AppConfig class  
+        - Define ModelMapper bean in configuration class
+- Step 04: Create DTO class with name as UserMmDto
+    - DTO layer
+        - Create UserMmDto with fields userid, username
+- Step 05: Create getUserDtoById method with Entity to DTO conversion Login
     - Controller Layer
-        - Create new controller named UserJsonViewController  
-        - Copy getUserById method from UserController and create 2 methods
-            - External getUserById
-                - GET /jsonview/users/external/101
-                - Annotate with @JsonView(Views.External.class)
-                - Test it using POSTMAN
-            - Internal getUserById2
-                 - GET /jsonview/users/internal/101
-                 - Annotate with @JsonView(Views.Internal.class)
-                 - Test it using POSTMAN
-                              
+        - Create new controller UserModelMapperController
+        - Annotate with @RestController
+        - Annotate with @RequestMapping("/modelmapper/users")
+        - Create getUserDtoById method
+            - GET /{id}
+        - Implement ModelMapper conversion Logic
+    - Test using POSTMAN
+- Step 06: Commit Code 
+    - Commit Code
+    - Push branch to remote repo
+    
+         
+                        
+        
+        
+        
+        
+  
+        
+    
+                            

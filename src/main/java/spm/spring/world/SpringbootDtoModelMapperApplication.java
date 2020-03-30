@@ -10,9 +10,9 @@ import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 import java.util.Locale;
 
 @SpringBootApplication
-public class SpringbootInternationalizationApplication {
+public class SpringbootDtoModelMapperApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootInternationalizationApplication.class, args);
+		SpringApplication.run(SpringbootDtoModelMapperApplication.class, args);
 	}
 
 	@Bean
