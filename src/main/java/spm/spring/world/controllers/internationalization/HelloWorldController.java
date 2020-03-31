@@ -1,4 +1,4 @@
-package spm.spring.world.controllers;
+package spm.spring.world.controllers.internationalization;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.i18n.LocaleContextHolder;
