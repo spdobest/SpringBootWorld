@@ -90,12 +90,20 @@
 			<version>2.3.6</version>
 		</dependency>
 
-<!--		MapStruct Dependency-->
+		<!--		MapStruct Dependency-->
 		<dependency>
 			<groupId>org.mapstruct</groupId>
 			<artifactId>mapstruct-jdk8</artifactId>
 			<version>${org.mapstruct.version}</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+			<version>2.10.2</version>
+		</dependency>
+
 
 	</dependencies>
 
