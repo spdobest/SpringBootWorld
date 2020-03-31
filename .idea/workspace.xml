@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b007e96b-e3d8-4e97-8429-8aa71d5e025b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UseHateOasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UseHateOasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserJsonViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/dtoModelMapper/UserJsonViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserMappingJacksonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/dtoModelMapper/UserMappingJacksonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserModelMapperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/dtoModelMapper/UserModelMapperController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +28,9 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Springboot" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -37,11 +41,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Udemy-Springboot4-Validation-GlobalException" />
+        <entry key="$PROJECT_DIR$" value="Udemy-Springboot10-01-DTOS-ModelMapper" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
@@ -60,6 +71,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllLocals" value="false" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -81,9 +94,6 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="spm.spring.world.exceptions" />
     </key>
@@ -93,25 +103,36 @@
       <recent name="$PROJECT_DIR$/SpringDemo/src/main/java/com/example/demo" />
       <recent name="$PROJECT_DIR$/SpringDemo" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.SpringbootJPAApplication">
-    <configuration name="SpringbootJPAApplication" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="spm.spring.world.SpringbootJPAApplication" />
+  <component name="RunManager" selected="Application.SpringbootDtoModelMapperApplication">
+    <configuration name="SpringbootDtoModelMapperApplication" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="spm.spring.world.SpringbootDtoModelMapperApplication" />
       <module name="Springboot" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UdemySpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="SpringbootJPAApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Springboot" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="spm.spring.world.SpringbootJPAApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UdemySpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Springboot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="spm.spring.world.SpringbootDtoModelMapperApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.SpringbootJPAApplication" />
+      <item itemvalue="Application.SpringbootDtoModelMapperApplication" />
       <item itemvalue="Spring Boot.UdemySpringbootApplication" />
+      <item itemvalue="Spring Boot.SpringbootJPAApplication" />
     </list>
   </component>
   <component name="ServiceViewManager">
@@ -137,6 +158,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583684582385</updated>
       <workItem from="1585047763718" duration="4391000" />
+      <workItem from="1585498394099" duration="15039000" />
     </task>
     <task id="LOCAL-00001" summary="added microservices read me file">
       <created>1584033704237</created>
@@ -166,7 +188,35 @@
       <option name="project" value="LOCAL" />
       <updated>1585444887103</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Springboot Internalization example">
+      <created>1585499106221</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585499106221</updated>
+    </task>
+    <task id="LOCAL-00006" summary="@JsonIgnore, @JsonIgnoreProperties - first COmit">
+      <created>1585508968261</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1585508968261</updated>
+    </task>
+    <task id="LOCAL-00007" summary="MappingJacksonValue - first Commit">
+      <created>1585519042675</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585519042675</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Created EMployee , User with JsonView example">
+      <created>1585523132060</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1585523132060</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +228,11 @@
     <MESSAGE value="added getALlUser,getUserByIf,getUserByName,deleteUser,updateUser methods are implemented." />
     <MESSAGE value="One to many and mAny to one mapping done with orders and user entity" />
     <MESSAGE value="Added all HATEOAS links to the orders and user model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added all HATEOAS links to the orders and user model" />
+    <MESSAGE value="Springboot Internalization example" />
+    <MESSAGE value="@JsonIgnore, @JsonIgnoreProperties - first COmit" />
+    <MESSAGE value="MappingJacksonValue - first Commit" />
+    <MESSAGE value="Created EMployee , User with JsonView example" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created EMployee , User with JsonView example" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -189,17 +243,20 @@
     </state>
     <state x="640" y="83" key="#Assign_Data_Sources/0.23.1440.798@0.23.1440.798" timestamp="1584831790981" />
     <state x="640" y="83" key="#Assign_Data_Sources/0.23.1440.801@0.23.1440.801" timestamp="1584744432659" />
-    <state x="244" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585405826387">
-      <screen x="0" y="23" width="1440" height="811" />
-    </state>
-    <state x="244" y="102" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.798@0.23.1440.798" timestamp="1584838468764" />
-    <state x="244" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.811@0.23.1440.811" timestamp="1585405826387" />
-    <state x="533" y="107" key="#com.intellij.ide.util.MemberChooser" timestamp="1585441216586">
+    <state x="244" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585576465697">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
+    <state x="244" y="102" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.798@0.23.1440.798" timestamp="1584838468764" />
+    <state x="244" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.806@0.23.1440.806" timestamp="1585498571059" />
+    <state x="244" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.808@0.23.1440.808" timestamp="1585576465697" />
+    <state x="244" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.811@0.23.1440.811" timestamp="1585405826387" />
+    <state x="533" y="107" key="#com.intellij.ide.util.MemberChooser" timestamp="1585577152394">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
     <state x="533" y="106" key="#com.intellij.ide.util.MemberChooser/0.23.1440.798@0.23.1440.798" timestamp="1584834990777" />
-    <state x="533" y="107" key="#com.intellij.ide.util.MemberChooser/0.23.1440.806@0.23.1440.806" timestamp="1585055475031" />
-    <state x="533" y="107" key="#com.intellij.ide.util.MemberChooser/0.23.1440.808@0.23.1440.808" timestamp="1585441216586" />
+    <state x="533" y="107" key="#com.intellij.ide.util.MemberChooser/0.23.1440.804@0.23.1440.804" timestamp="1585521462443" />
+    <state x="533" y="107" key="#com.intellij.ide.util.MemberChooser/0.23.1440.806@0.23.1440.806" timestamp="1585577152394" />
+    <state x="533" y="107" key="#com.intellij.ide.util.MemberChooser/0.23.1440.808@0.23.1440.808" timestamp="1585576027828" />
     <state x="533" y="108" key="#com.intellij.ide.util.MemberChooser/0.23.1440.811@0.23.1440.811" timestamp="1585403554060" />
     <state x="533" y="108" key="#com.intellij.ide.util.MemberChooser/0.23.1440.812@0.23.1440.812" timestamp="1585401305750" />
     <state x="517" y="231" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584832615675">
@@ -218,10 +275,10 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="651" y="292" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.804@0.23.1440.804" timestamp="1585422347809" />
-    <state x="409" y="32" key="CommitChangelistDialog2" timestamp="1585444886495">
-      <screen x="0" y="23" width="1440" height="806" />
+    <state x="567" y="31" key="CommitChangelistDialog2" timestamp="1585659399292">
+      <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="409" y="32" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1585422666209" />
+    <state x="567" y="31" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1585659399292" />
     <state x="409" y="32" key="CommitChangelistDialog2/0.23.1440.806@0.23.1440.806" timestamp="1585444886495" />
     <state x="564" y="191" key="CommitChangelistDialog2/0.23.1920.977@0.23.1920.977" timestamp="1584033748501" />
     <state width="423" height="466" key="DebuggerActiveHint" timestamp="1585422377235">
@@ -233,74 +290,82 @@
     </state>
     <state x="100" y="122" width="1240" height="579" key="DiffContextDialog/0.23.1440.798@0.23.1440.798" timestamp="1584833101890" />
     <state x="100" y="123" width="1240" height="586" key="DiffContextDialog/0.23.1440.808@0.23.1440.808" timestamp="1585413716358" />
-    <state width="904" height="188" key="GridCell.Tab.0.bottom" timestamp="1585444998069">
+    <state width="1064" height="146" key="GridCell.Tab.0.bottom" timestamp="1585577160361">
       <screen x="0" y="23" width="1440" height="806" />
     </state>
     <state width="970" height="410" key="GridCell.Tab.0.bottom/0.23.1440.798@0.23.1440.798" timestamp="1584840188652" />
     <state width="800" height="151" key="GridCell.Tab.0.bottom/0.23.1440.801@0.23.1440.801" timestamp="1585422566540" />
-    <state width="800" height="332" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1585422805792" />
-    <state width="904" height="188" key="GridCell.Tab.0.bottom/0.23.1440.806@0.23.1440.806" timestamp="1585444998069" />
-    <state width="800" height="332" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1585442183137" />
+    <state width="1064" height="259" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1585522738219" />
+    <state width="1064" height="146" key="GridCell.Tab.0.bottom/0.23.1440.806@0.23.1440.806" timestamp="1585577160361" />
+    <state width="1064" height="228" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1585576405729" />
     <state width="697" height="133" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1585406024220" />
     <state width="970" height="118" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1585127290060" />
     <state width="1206" height="263" key="GridCell.Tab.0.bottom/0.23.1920.977@0.23.1920.977" timestamp="1584033763521" />
-    <state width="904" height="188" key="GridCell.Tab.0.center" timestamp="1585444998068">
+    <state width="1064" height="146" key="GridCell.Tab.0.center" timestamp="1585577160361">
       <screen x="0" y="23" width="1440" height="806" />
     </state>
     <state width="970" height="410" key="GridCell.Tab.0.center/0.23.1440.798@0.23.1440.798" timestamp="1584840188651" />
     <state width="800" height="151" key="GridCell.Tab.0.center/0.23.1440.801@0.23.1440.801" timestamp="1585422566540" />
-    <state width="800" height="332" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1585422805791" />
-    <state width="904" height="188" key="GridCell.Tab.0.center/0.23.1440.806@0.23.1440.806" timestamp="1585444998068" />
-    <state width="800" height="332" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1585442183136" />
+    <state width="1064" height="259" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1585522738219" />
+    <state width="1064" height="146" key="GridCell.Tab.0.center/0.23.1440.806@0.23.1440.806" timestamp="1585577160361" />
+    <state width="1064" height="228" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1585576405729" />
     <state width="697" height="133" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1585406024219" />
     <state width="970" height="118" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1585127290060" />
     <state width="1206" height="263" key="GridCell.Tab.0.center/0.23.1920.977@0.23.1920.977" timestamp="1584033763521" />
-    <state width="904" height="188" key="GridCell.Tab.0.left" timestamp="1585444998067">
+    <state width="1064" height="146" key="GridCell.Tab.0.left" timestamp="1585577160360">
       <screen x="0" y="23" width="1440" height="806" />
     </state>
     <state width="970" height="410" key="GridCell.Tab.0.left/0.23.1440.798@0.23.1440.798" timestamp="1584840188650" />
     <state width="800" height="151" key="GridCell.Tab.0.left/0.23.1440.801@0.23.1440.801" timestamp="1585422566539" />
-    <state width="800" height="332" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1585422805790" />
-    <state width="904" height="188" key="GridCell.Tab.0.left/0.23.1440.806@0.23.1440.806" timestamp="1585444998067" />
-    <state width="800" height="332" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1585442183135" />
+    <state width="1064" height="259" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1585522738218" />
+    <state width="1064" height="146" key="GridCell.Tab.0.left/0.23.1440.806@0.23.1440.806" timestamp="1585577160360" />
+    <state width="1064" height="228" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1585576405728" />
     <state width="697" height="133" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1585406024219" />
     <state width="970" height="118" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1585127290059" />
     <state width="1206" height="263" key="GridCell.Tab.0.left/0.23.1920.977@0.23.1920.977" timestamp="1584033763520" />
-    <state width="904" height="188" key="GridCell.Tab.0.right" timestamp="1585444998068">
+    <state width="1064" height="146" key="GridCell.Tab.0.right" timestamp="1585577160361">
       <screen x="0" y="23" width="1440" height="806" />
     </state>
     <state width="970" height="410" key="GridCell.Tab.0.right/0.23.1440.798@0.23.1440.798" timestamp="1584840188651" />
     <state width="800" height="151" key="GridCell.Tab.0.right/0.23.1440.801@0.23.1440.801" timestamp="1585422566540" />
-    <state width="800" height="332" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1585422805791" />
-    <state width="904" height="188" key="GridCell.Tab.0.right/0.23.1440.806@0.23.1440.806" timestamp="1585444998068" />
-    <state width="800" height="332" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1585442183136" />
+    <state width="1064" height="259" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1585522738219" />
+    <state width="1064" height="146" key="GridCell.Tab.0.right/0.23.1440.806@0.23.1440.806" timestamp="1585577160361" />
+    <state width="1064" height="228" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1585576405729" />
     <state width="697" height="133" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1585406024220" />
     <state width="970" height="118" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1585127290060" />
     <state width="1206" height="263" key="GridCell.Tab.0.right/0.23.1920.977@0.23.1920.977" timestamp="1584033763521" />
-    <state width="800" height="220" key="GridCell.Tab.1.bottom" timestamp="1585422348038">
-      <screen x="0" y="23" width="1440" height="804" />
+    <state width="1064" height="314" key="GridCell.Tab.1.bottom" timestamp="1585577002976">
+      <screen x="0" y="23" width="1440" height="806" />
     </state>
     <state width="1398" height="321" key="GridCell.Tab.1.bottom/0.23.1440.798@0.23.1440.798" timestamp="1584833109184" />
     <state width="800" height="220" key="GridCell.Tab.1.bottom/0.23.1440.804@0.23.1440.804" timestamp="1585422348038" />
+    <state width="1064" height="314" key="GridCell.Tab.1.bottom/0.23.1440.806@0.23.1440.806" timestamp="1585577002976" />
     <state width="1398" height="223" key="GridCell.Tab.1.bottom/0.23.1440.808@0.23.1440.808" timestamp="1584655457386" />
-    <state width="800" height="220" key="GridCell.Tab.1.center" timestamp="1585422348037">
-      <screen x="0" y="23" width="1440" height="804" />
+    <state width="1064" height="314" key="GridCell.Tab.1.center" timestamp="1585577002975">
+      <screen x="0" y="23" width="1440" height="806" />
     </state>
     <state width="1398" height="321" key="GridCell.Tab.1.center/0.23.1440.798@0.23.1440.798" timestamp="1584833109183" />
     <state width="800" height="220" key="GridCell.Tab.1.center/0.23.1440.804@0.23.1440.804" timestamp="1585422348037" />
+    <state width="1064" height="314" key="GridCell.Tab.1.center/0.23.1440.806@0.23.1440.806" timestamp="1585577002975" />
     <state width="1398" height="223" key="GridCell.Tab.1.center/0.23.1440.808@0.23.1440.808" timestamp="1584655457385" />
-    <state width="800" height="220" key="GridCell.Tab.1.left" timestamp="1585422348037">
-      <screen x="0" y="23" width="1440" height="804" />
+    <state width="1064" height="314" key="GridCell.Tab.1.left" timestamp="1585577002974">
+      <screen x="0" y="23" width="1440" height="806" />
     </state>
     <state width="1398" height="321" key="GridCell.Tab.1.left/0.23.1440.798@0.23.1440.798" timestamp="1584833109182" />
     <state width="800" height="220" key="GridCell.Tab.1.left/0.23.1440.804@0.23.1440.804" timestamp="1585422348037" />
+    <state width="1064" height="314" key="GridCell.Tab.1.left/0.23.1440.806@0.23.1440.806" timestamp="1585577002974" />
     <state width="1398" height="223" key="GridCell.Tab.1.left/0.23.1440.808@0.23.1440.808" timestamp="1584655457384" />
-    <state width="800" height="220" key="GridCell.Tab.1.right" timestamp="1585422348038">
-      <screen x="0" y="23" width="1440" height="804" />
+    <state width="1064" height="314" key="GridCell.Tab.1.right" timestamp="1585577002975">
+      <screen x="0" y="23" width="1440" height="806" />
     </state>
     <state width="1398" height="321" key="GridCell.Tab.1.right/0.23.1440.798@0.23.1440.798" timestamp="1584833109183" />
     <state width="800" height="220" key="GridCell.Tab.1.right/0.23.1440.804@0.23.1440.804" timestamp="1585422348038" />
+    <state width="1064" height="314" key="GridCell.Tab.1.right/0.23.1440.806@0.23.1440.806" timestamp="1585577002975" />
     <state width="1398" height="223" key="GridCell.Tab.1.right/0.23.1440.808@0.23.1440.808" timestamp="1584655457385" />
+    <state x="562" y="181" key="MultipleFileMergeDialog" timestamp="1585659439551">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="562" y="181" key="MultipleFileMergeDialog/0.23.1440.804@0.23.1440.804" timestamp="1585659439551" />
     <state x="680" y="306" key="RollbackChangesDialog" timestamp="1584031565451">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
@@ -309,14 +374,15 @@
       <screen x="0" y="23" width="1440" height="798" />
     </state>
     <state x="186" y="23" key="SettingsEditor/0.23.1440.798@0.23.1440.798" timestamp="1584832934795" />
-    <state width="549" height="447" key="SwitcherDM" timestamp="1585414203455">
-      <screen x="0" y="23" width="1440" height="808" />
+    <state width="549" height="476" key="SwitcherDM" timestamp="1585522503517">
+      <screen x="0" y="23" width="1440" height="804" />
     </state>
+    <state width="549" height="476" key="SwitcherDM/0.23.1440.804@0.23.1440.804" timestamp="1585522503517" />
     <state width="549" height="447" key="SwitcherDM/0.23.1440.808@0.23.1440.808" timestamp="1585414203455" />
-    <state x="398" y="275" key="Vcs.Push.Dialog.v2" timestamp="1585444893691">
-      <screen x="0" y="23" width="1440" height="806" />
+    <state x="398" y="274" key="Vcs.Push.Dialog.v2" timestamp="1585659401403">
+      <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="398" y="274" key="Vcs.Push.Dialog.v2/0.23.1440.804@0.23.1440.804" timestamp="1585422668692" />
+    <state x="398" y="274" key="Vcs.Push.Dialog.v2/0.23.1440.804@0.23.1440.804" timestamp="1585659401403" />
     <state x="398" y="275" key="Vcs.Push.Dialog.v2/0.23.1440.806@0.23.1440.806" timestamp="1585444893691" />
     <state x="530" y="328" key="Vcs.Push.Dialog.v2/0.23.1920.977@0.23.1920.977" timestamp="1584033755404" />
     <state x="460" y="183" key="VcsDiffUtil.ChangesDialog" timestamp="1585413678485">
@@ -328,10 +394,18 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="582" y="206" width="642" height="464" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.804@0.23.1440.804" timestamp="1585422197213" />
+    <state x="516" y="71" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585521903206">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="516" y="71" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.804@0.23.1440.804" timestamp="1585521903206" />
     <state x="727" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584033723396">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="727" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.977@0.23.1920.977" timestamp="1584033723396" />
+    <state x="604" y="178" key="git4idea.branch.GitSmartOperationDialog" timestamp="1585659433418">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="604" y="178" key="git4idea.branch.GitSmartOperationDialog/0.23.1440.804@0.23.1440.804" timestamp="1585659433418" />
     <state x="924" y="151" width="670" height="676" key="search.everywhere.popup" timestamp="1584904969572">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
@@ -347,7 +421,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserController.java</url>
-          <line>30</line>
+          <line>31</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -364,6 +438,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/spm/spring/world/service/OrderService.java</url>
           <line>51</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/dtoModelMapper/UserModelMapperController.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/dtoModelMapper/UserModelMapperController.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/spm/spring/world/service/UserService.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
