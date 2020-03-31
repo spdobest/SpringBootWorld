@@ -1,4 +1,4 @@
-package spm.spring.world.controllers;
+package spm.spring.world.controllers.dtoModelMapper;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

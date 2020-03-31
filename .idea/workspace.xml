@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b007e96b-e3d8-4e97-8429-8aa71d5e025b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/config/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserModelMapperController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/dto/UserMmDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Springboot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Springboot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/SpringbootInternationalizationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/SpringbootDtoModelMapperApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserJsonViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/dtoModelMapper/UserJsonViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserMappingJacksonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/dtoModelMapper/UserMappingJacksonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserModelMapperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/dtoModelMapper/UserModelMapperController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +71,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllLocals" value="false" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -270,10 +267,10 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="651" y="292" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.804@0.23.1440.804" timestamp="1585422347809" />
-    <state x="567" y="31" key="CommitChangelistDialog2" timestamp="1585523131532">
+    <state x="567" y="31" key="CommitChangelistDialog2" timestamp="1585659377507">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="567" y="31" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1585523131532" />
+    <state x="567" y="31" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1585659377507" />
     <state x="409" y="32" key="CommitChangelistDialog2/0.23.1440.806@0.23.1440.806" timestamp="1585444886495" />
     <state x="564" y="191" key="CommitChangelistDialog2/0.23.1920.977@0.23.1920.977" timestamp="1584033748501" />
     <state width="423" height="466" key="DebuggerActiveHint" timestamp="1585422377235">
@@ -427,12 +424,12 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserModelMapperController.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/dtoModelMapper/UserModelMapperController.java</url>
           <line>29</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserModelMapperController.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/dtoModelMapper/UserModelMapperController.java</url>
           <line>30</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
