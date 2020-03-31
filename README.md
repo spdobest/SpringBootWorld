@@ -32,11 +32,70 @@
 - Step-01: New GIT branch
     - git Branch Name : Udemy-Springboot11-Versioning
     - Create new local branch
-- Step-02: Static Filtering
+- Step-02: Create two DTO's and add additional field in Entity named "address"
     - Entity Layer
-        - @JsonIgnore - Apply to SSN fields
-        - Test
-        - @JsonIgnoreProperties - Apply to role and email
-        - Test
-- Step-03: Commit code
-    - commit and push code                  
+        - Add new field named city
+        - Update the data.sql with address
+    - DTO Layer
+        - Create two DTO's
+            - UserDtoV1 - Contains all other fields except "address"
+            - UserDtoV2 - Contains all other fields with  "address" field
+- Step-03: Implement URI Versioning
+    - Controller Layer
+        - Create UserUriVersioningController by copying UserModelMapperController
+        - We are going to use ModelMapper to transform Entity to DTO
+        - Implement getUserByIdV1 and getUserByIdV2 methods with URI's
+        - URI Versions
+            - @GetMapping({"/v1.0/{id}","/v1.1/{id}"})                  
+            - @GetMapping("/v2.0/{id}")                  
+    - Test Using POSTMAN
+        - Version V1.0 - GET http://localhost:8080/versioning/uri/users/v1.0/101           
+        - Version V1.1 - GET http://localhost:8080/versioning/uri/users/v1.1/101           
+        - Version V2.0 - GET http://localhost:8080/versioning/uri/users/v2.0/101
+- Step-04: Implement Request Parameter Versioning
+    - Controller Layer
+        - Create UserRequestParameterVersioningController by copying UserUriVersioningController
+        - We are going to use ModelMapper to transform Entity to DTO.
+        - Implement getUserByIdv1 and getUserByIdv2 methods with Request Parameters
+        - Request Parameters
+            - @GetMapping(value = "/{id}",param="version=1")            
+            - @GetMapping(value = "/{id}",param="version=2")  
+    - Test Using POSTMAN
+        - Version V1
+            - GET http://localhost:8080/versioning/params/users/101?version=1                  
+         - Version V2
+            - GET http://localhost:8080/versioning/params/users/101?version=2  
+              
+- Step-05: Implement Custom Header Versioning
+    - Controller Layer
+        - Create UserCustomHeaderVersioningController by copying UserRequestParameterVersioningController
+        - We are going to use ModelMapper to transform Entity to DTO
+        - Implement getUserByIdV1 & getUserByIdV2 methods with custom Headers
+        - Custom Headers
+            - @GetMapping(value = "/{id}", headers="API-VERSION=1")                                 
+            - @GetMapping(value = "/{id}", headers="API-VERSION=2")
+    - Test Using POSTMAN
+        - Version V1
+            - GET http://localhost:8080/versioning/params/users/101
+            - Header: API-VERSION = 1               
+        - Version V2
+            - GET http://localhost:8080/versioning/params/users/101
+            - Header: API-VERSION = 2 
+- Step-06: Implement Media Type Versioning
+    - Controller Layer
+        - Create UserMediaVersioningController by copying UserRequestParameterVersioningController
+        - We are going to use ModelMapper to transform Entity to DTO
+        - Implement getUserByIdV1 & getUserByIdV2 methods with custom Headers
+    - Media Type
+    - @GetMapping( value = "/{id}", produces="application/vnd.stackssimplify.app-v1+json")                            
+    - @GetMapping( value = "/{id}", produces="application/vnd.stackssimplify.app-v2+json")  
+    - Test Using POSTMAN
+        - Version V1
+            - GET http://localhost:8080/versioning/params/users/101
+            - Header: Accept = application/vnd.stacksimplify.app-v1+json                    
+        - Version V2
+            - GET http://localhost:8080/versioning/params/users/101
+            - Header: Accept = application/vnd.stacksimplify.app-v2+json   
+              
+- Step-07: Commit & Push Code to remote branch
+                 

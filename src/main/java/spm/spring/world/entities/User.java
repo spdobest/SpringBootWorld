@@ -30,6 +30,25 @@ public class User extends RepresentationModel {
     @JsonView(Views.External.class)
     private String firstName;
 
+    @Size(min = 2, message = "address should have atleast 2 characters")
+    @Column(name = "ADDRESS", length = 50, nullable = false)
+    private String address;
+
+    //FIELD CONSTRUCTOR
+    public User(String userName, String firstName, String lastName, String emailId, String role, String ssn, String address) {
+        this.userName = userName;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.emailId = emailId;
+        this.role = role;
+        this.ssn = ssn;
+        this.address = address;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
     @Column(name = "LAST_NAME", length = 50, nullable = false)
     @JsonView(Views.External.class)
     private String lastName;
@@ -63,14 +82,8 @@ public class User extends RepresentationModel {
     public User() {
     }
 
-    //FIELD CONSTRUCTOR
-    public User(String userName, String firstName, String lastName, String emailId, String role, String ssn) {
-        this.userName = userName;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.emailId = emailId;
-        this.role = role;
-        this.ssn = ssn;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
 // GETTERS AND SETTERS
@@ -137,6 +150,7 @@ public class User extends RepresentationModel {
                 "userId=" + userId +
                 ", userName='" + userName + '\'' +
                 ", firstName='" + firstName + '\'' +
+                ", address='" + address + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", emailId='" + emailId + '\'' +
                 ", role='" + role + '\'' +
