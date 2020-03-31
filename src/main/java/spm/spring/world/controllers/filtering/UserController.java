@@ -1,4 +1,4 @@
-package spm.spring.world.controllers;
+package spm.spring.world.controllers.filtering;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;

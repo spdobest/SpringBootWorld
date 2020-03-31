@@ -1,13 +1,11 @@
-package spm.spring.world.controllers;
+package spm.spring.world.controllers.dtoMapper;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
 import spm.spring.world.dtos.UserMmDto;
 import spm.spring.world.entities.User;
 import spm.spring.world.exceptions.UserNotFoundException;
