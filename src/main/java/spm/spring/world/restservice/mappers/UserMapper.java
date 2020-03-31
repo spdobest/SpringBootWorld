@@ -15,7 +15,7 @@ public interface UserMapper {
 
     // use To User UserMsDto
 //    @Mapping(source = "emailId", target = "emailaddress") // if we do mapping for only one field
-    @Mappings({ @Mapping(source = "emailId", target = "emailaddress"),
+    @Mappings({@Mapping(source = "emailId", target = "emailaddress"),
             @Mapping(source = "role", target = "roleNumber")
     })
     UserMsDto userToUserMsDto(User user);

@@ -1,4 +1,4 @@
-package spm.spring.world.controllers;
+package spm.spring.world.controllers.dtosmapStruct;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.beans.factory.annotation.Autowired;

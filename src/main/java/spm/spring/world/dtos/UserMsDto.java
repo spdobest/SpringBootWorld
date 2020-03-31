@@ -7,7 +7,8 @@ public class UserMsDto {
     private String emailaddress;
     private String roleNumber;
 
-    public UserMsDto(){}
+    public UserMsDto() {
+    }
 
     public UserMsDto(Long userId, String userName, String emailaddress, String roleNumber) {
         this.userId = userId;
