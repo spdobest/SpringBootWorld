@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b007e96b-e3d8-4e97-8429-8aa71d5e025b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserMapStructController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/dtos/UserMsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/restservice/mappers/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Springboot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Springboot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/SpringbootDtoModelMapperApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/SpringbootDtoMapStructApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/EmployeeJsonViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/EmployeeJsonViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UseHateOasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UseHateOasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserJsonViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserJsonViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserMappingJacksonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserMappingJacksonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserModelMapperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UserModelMapperController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/dto/UserMmDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/dtos/UserMmDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/restservice/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/restservice/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/restservice/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/EmployeeJsonViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/employee/EmployeeJsonViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/HelloWorldController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/internationalization/HelloWorldController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/OrderHateOasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/hateoas/OrderHateOasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/UseHateOasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spm/spring/world/controllers/hateoas/UseHateOasController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
