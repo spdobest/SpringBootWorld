@@ -1,4 +1,4 @@
-# Spring Boot Admin
+## Spring Boot Admin
 - Spring boot Admin server is a web application used for managing and
 monitoring spring boot applications.
 - It is available as a war packages so it can be deployed to any of the
