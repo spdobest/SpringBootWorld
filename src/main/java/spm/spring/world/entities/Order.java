@@ -2,13 +2,13 @@ package spm.spring.world.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonView;
-import org.springframework.hateoas.RepresentationModel;
+import org.springframework.transaction.support.ResourceHolderSupport;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "orders")
-public class Order extends RepresentationModel {
+public class Order extends ResourceHolderSupport {
 
     @Id
     @GeneratedValue
