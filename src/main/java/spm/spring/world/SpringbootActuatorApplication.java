@@ -10,9 +10,9 @@ import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 import java.util.Locale;
 
 @SpringBootApplication
-public class SpringbootSwaggerApplication {
+public class SpringbootActuatorApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootSwaggerApplication.class, args);
+        SpringApplication.run(SpringbootActuatorApplication.class, args);
     }
 
     @Bean
