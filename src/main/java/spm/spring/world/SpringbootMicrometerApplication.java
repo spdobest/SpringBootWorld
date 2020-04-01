@@ -10,9 +10,9 @@ import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 import java.util.Locale;
 
 @SpringBootApplication
-public class SpringbootActuatorApplication {
+public class SpringbootMicrometerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootActuatorApplication.class, args);
+        SpringApplication.run(SpringbootMicrometerApplication.class, args);
     }
 
     @Bean

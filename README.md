@@ -1,65 +1,76 @@
-# Spring Boot - Actuator and Spring Bot Admin
-- Step-01: New GIT branch usiong IDE
-- Step-02: Add Spring Boot Actuator Dependency in pom.xml and
-verify actuator endpoints
-- Step-03: Expose all endpoints and verify health endpoint
-and discuss about all other endpoints.
-- Step-04: Info Endpoint: Populate build-info on info endpoint.
-- Step 05: Metrics End Point
+# Spring Boot - Micrometer  
+- Micrometer is the metrics collection facility included in Spring Boot
+2's Actuator
+- Micrometer is a dimensional-first metrics collection facade whose
+aim is to allow us to time, count and gauge your code with a vendor
+neutral API.
+- Through classpath and configuration, we can select one or several
+monitoring systems to export our metrics data
+- It has also been back ported to spring boot 1.5, 1.4, 1.3 with the
+addition of another dependency.
   
-## Details Implementation Step by Step.
+## Spring Boot - Micrometer
+- A single Micrometer Timer is capable of producing time series
+related to throughput, total time, maximum latency of recent 
+samples, pre-computed percentiles, percentile histograms, and SLA
+boundary counts.
+- The change to Micrometer arose out of a desire to better serve a 
+Wave of dimensional monitoring systems ( Think prometheus,
+  Datadog, Wavefront, SignalFx, influx).
+- Spring Boot is enabling us to choose one or more monitoring systems
+to use today, and change our mind later as our needs change without
+requiring a rewrite of our custom metrics instrumentation.
+- https://micrometer.io/docs
+  
+## Micrometer Details Implementation Steps
 - Step-00: Introduction
 - Step-01: New GIT branch
-    - git branch name: Udemy-Springboot13-Actuator&Admin
-    - Create new local branch   
-- Step-02: Add Spring Boot Actuator Dependency to pom.xml and restart Embedded Tomcat
-    ```
-  <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator -->
+    - git branch name:  Udemy-Springboot14-ActuatorMicrometer 
+    - create new git branch
+- Step-02: Add micrometer dependency for Metrics.
+   ```
   <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-actuator</artifactId>
-      <version>2.2.6.RELEASE</version>
-  </dependency>
+  			<groupId>io.micrometer</groupId>
+  			<artifactId>micrometer-core</artifactId>
+  			<version>1.2.0</version> 
+  		</dependency>
+    ```   
+  - Simple (In-Memory backend - `~Fail back option) - by default enabled
+    - To disable: management.metrics.export.simple.enabled=false
+    - http://localhost:8080/actuator.metrics/http.server.requests
+    - http://localhost:8080/actuator.metrics/process.files.open
+-Step-03: Integrate with JMX and view metrics in Jconsole using JMX (Export Metrics)
+    - Add JMX dependency  
+    
     ```
-    - Verify the Endpoint
-        - http://localhost:8080/actuator
-    - Only 2 endpoints
-        - health
-        - info
-    - Other Endpoints (full details)
-        - https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html 
-- Step-03: Expose all Actuator endpoints.
-    - application.properties
-         - management.endpoints.web.exposure.include=*
-    - Restart Embedded Tomcat
-    - Verify the endpoints
-         - http://localhost:8080/actuator
-- Step-04: Info Endpoint
-    - Retrieve Build properties
-        - Update pom.xml
-        ```
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <executions>
-            <execution>
-                <id>build-info</id>
-                <goals>
-                    <goal>build-info</goal>
-                 </goals>
-            </execution>
-        </executionS>    
-      </plugin>
-      
-        ```  
-    - Actuator Automatically Environment properties which starts with info in application.properties
-        - info.greetings=Good Morning
-    - Info Endpoint can gather properties from many springboot externalized sources.
-        - https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.xml
-- Step-05: Metrics End Point                     
-    - Metrics
-        - http://localhost:8080/actuator/matrics                     
-        - http://localhost:8080/actuator/matrics/jvm.memory.used                     
-        - http://localhost:8080/actuator/matrics/jvm.threads.states                     
-        - http://localhost:8080/actuator/matrics/http.server.request                     
-        
+    <dependency>
+          <groupId>io.micrometer</groupId>
+          <artifactId>micrometer-registry-jmx</artifactId>
+          <version>1.2.0</version> 
+     </dependency>
+    ``` 
+     - Add JMX property
+        - management.metrics.export.jmx.enabled: true
+     - Test 
+        - JVM Threads live
+ - Step-04: Integrate with AppOptics to export metrics and view metrics in AppOptics(Solarwinds product)
+    -AppOptics
+        - Create a trial user in APpOptics(https://www.appoptics.com/)              
+        - Create API taken by navigating to Settings -> API Tokens
+    - Our Springboot Application
+        - Add this token in our project application.properties
+            - management.metrics.export.appoptics.api-token=TOKEN
+        - Add dependency for AppOptics in pom.xml & restart embedded tomcat
+            ```
+               <dependency>
+                    <groupId>io.micrometer</groupId>
+                    <artifactId>micrometer-registry-appoptics</artifactId>
+                    <version>1.2.0</version> 
+               </dependency>
+            ```   
+        - Create "MonitoringConfig" file by referring documentation for AppOpticsConfig
+            - https://micrometer.io/docs/registry/appoptics
+        - Restart JVM
+- Step-05: Perform Tests using POSTMAN
+    - Perform "Collection Runner" test via POSTMAN with 1000 requests.
+                                 
