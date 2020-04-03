@@ -69,7 +69,7 @@ requiring a rewrite of our custom metrics instrumentation.
                </dependency>
             ```   
         - Create "MonitoringConfig" file by referring documentation for AppOpticsConfig
-            - https://micrometer.io/docs/registry/appoptics
+            - https://micrometer.io/docs/registry/appOptics
         - Restart JVM
 - Step-05: Perform Tests using POSTMAN
     - Perform "Collection Runner" test via POSTMAN with 1000 requests.
