@@ -1,4 +1,4 @@
-package spm.spring.world.controllers.employee;
+package spm.spring.world.controllers;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.beans.factory.annotation.Autowired;

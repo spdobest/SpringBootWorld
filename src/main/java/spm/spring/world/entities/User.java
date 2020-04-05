@@ -1,8 +1,6 @@
 package spm.spring.world.entities;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import org.springframework.transaction.support.ResourceHolderSupport;
 
 import javax.persistence.*;
@@ -12,12 +10,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "user")
-@ApiModel(description = "Mode to Create a new user")
 //@JsonIgnoreProperties({"firstName", "lastName"}) - this is Static Filtering @JsonIgnore
 //@JsonFilter(value = "userFilter") // this is dynamic filtering
 public class User extends ResourceHolderSupport {
 
-    @ApiModelProperty(notes = "auto generated unique id", required = true, position = 1)
     @Id
     @GeneratedValue
     @JsonView(Views.External.class)
