@@ -1,6 +1,7 @@
 # Spring Boot - Security
 https://www.youtube.com/playlist?list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE  
-  
+https://frontbackend.com/spring-boot/spring-boot-startup-failure-because-port-is-already-in-use   
+    
 ## Though app Server gives security , why application need security ?
 - Spring Security provides extra security to your application like
     - Who are you ??
@@ -78,4 +79,101 @@ Authorization :: Are they allowed to do this ??
     			<artifactId>spring-boot-starter-security</artifactId>
     		</dependency>
     ```
-        
+- after adding the dependency and restart the application, it will show an login screen
+without setting any configuration.
+## Spring Security Default behaviour
+- Add Mandatory authentication for URLs
+- Adds login form
+- Handles login error (validates login credentials - user name and password)
+- Create a user and sets a default password
+**NOTE*** if you see the console log, you will see  
+Using generated security password: 643ae8d0-8809-4c21-bc00-ad174b5780c5 
+and user is the username for the login form
+- You can set the User Name and password in application.properties file like below
+```
+spring.security.user.name=siba
+spring.security.user.password=siba
+```
+- After add this , you will not able to see the password in the spring console log
+## How to configure Spring Security Authentication
+- Authentication Manager: 
+    - It has a method name authenticate()
+    - It resides inside Spring Security package
+- You will not be dealing with authenticationManager class, you will
+deal with AuthenticationManagerBuilder
+- AuthenticationManagerBuilder
+    - Get hold of AuthenticationManagerBuilder
+    - Set the configuration on it
+- How to Hold of AuthenticationManagerBuilder
+    - Spring Security App have a class which contains method name
+    configure(AuthenticationManagerBuilder)
+## How to set up your own user id and password
+```
+@EnableWebSecurity
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        // set my configuration on the auth object
+        auth.inMemoryAuthentication()
+                .withUser("blah")
+                .password("blah")
+                .roles("USER");
+    }
+}
+```         
+- All passwords are in encoded format in spring security application
+- By using Hashing concept, it saves the password
+## How to set a Password encoder ?  
+Just expose an @Bean of type PasswordEncoder in securityConfiguration Class
+```
+@Bean
+    public PasswordEncoder getPasswordEncoder(){
+        return NoOpPasswordEncoder.getInstance();
+    }
+```
+## How to configure authorization Spring Security
+- Add these type of request mapping in controller
+```
+    @GetMapping("/")
+    public String home() {
+        return ("<h1>welcome</h1>");
+    }
+
+    @GetMapping("/admin")
+    public String admin() {
+        return ("<h1>welcome Admin</h1>");
+    }
+
+    @GetMapping("/user")
+    public String user() {
+        return ("<h1>welcome User</h1>");
+    }
+```
+- i SecurityConfiguration Class, add these below line of code
+```
+ @Override
+    protected void configure(HttpSecurity httpSecurity) throws Exception {
+        // set my configuration on the auth object
+        httpSecurity.authorizeRequests()
+                .antMatchers("/admin").hasRole("ADMIN")
+                .antMatchers("/user").hasAnyRole("USER","ADMIN")
+                .antMatchers("/").permitAll()
+                .and().formLogin();
+    }
+```
+## How Spring Security Authorization Works
+- Add spring security filter
+```
+<filter>
+<filter-name>springSecurityFilterChain</filter-name>
+<filter-class>org.springframework.web.filter.DelegatingFliterProxy</filter-class>
+</filter>
+```  
+```
+<filter-mapping>
+<filter-name>springSecurityFilterChain</filter-name>
+<filter-class>/*</filter-class>
+</filter-mapping>  
+```
+
+     
