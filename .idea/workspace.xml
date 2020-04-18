@@ -216,7 +216,7 @@
   </component>
   <component name="RunManager" selected="Application.SpringBootSecurityMySqlJpa">
     <configuration name="SpringBootSecurityMySqlJpa" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="spm.spring.world.MySqlWithJpaSecurityApplication" />
+      <option name="MAIN_CLASS_NAME" value="spm.spring.world.SpringBootIntroApplication" />
       <module name="Springboot" />
       <method v="2">
         <option name="Make" enabled="true" />
