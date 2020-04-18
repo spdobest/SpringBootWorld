@@ -7,8 +7,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-public class SpringbootSecurityApplication {
+public class MySqlWithJpaSecurityApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootSecurityApplication.class, args);
+        SpringApplication.run(MySqlWithJpaSecurityApplication.class, args);
     }
 }

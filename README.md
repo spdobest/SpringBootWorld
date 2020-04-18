@@ -1,54 +1,30 @@
-## How to do JDBC authentication with Spring Security
-https://www.youtube.com/watch?v=LKvrFltAgCQ&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE&index=7  
-- In this tutorial we will learn how to connect external database like oracle, mysql etc
-- In this JDBC authentication
-    - We will check the admin id and password stored in the external database
-    - if it matches, then it will move forward otherwise it will show error.
-    - DataSource
-    -  add user and admin id and password
-    ```
-       auth.jdbcAuthentication()
-                      .dataSource(dataSource)
-                      .withDefaultSchema()
-                      .withUser(
-                              User.withUsername("user")
-                              .password("pass")
-                              .roles("USER")
-                      )
-                      .withUser(
-                              User.withUsername("admin")
-                                      .password("pass")
-                                      .roles("ADMIN")
-                      );
-    ```
-- The default schema we got from the spring framework is available in below link
-https://docs.spring.io/spring-security/site/docs/4.0.4.RELEASE/reference/html/appendix-schema.html
-- Create a file named schema.sql and paste the below code
-```
-create table users(
-      username varchar_ignorecase(50) not null primary key,
-      password varchar_ignorecase(50) not null,
-      enabled boolean not null);
+# How to set up Security in MYSQL using JPA
+In this , we are going to implement security in MySql Database
+## First Install and Setup MySql Database
+- Download MySql from below link
+    - https://dev.mysql.com/downloads/file/?id=492745
+- Install the downloaded mysql file from above link
+- Setup the MySql Path in .bash profile
+- https://phoenixnap.com/kb/mysql-command-not-found-error
+    - To edit .bash_profile
+        -  nano .bash_profile
+        or
+        - open -t .bash_profile
+    - export PATH=${PATH}:/user/local/mysql/bin/
+    - To start MySql from command line
+        - /usr/local/mysql/support-files/mysql.server
+    - Set the user and password for mysql
+        - mysql --user=root --password=D0best42o
 
-  create table authorities (
-      username varchar_ignorecase(50) not null,
-      authority varchar_ignorecase(50) not null,
-      constraint fk_authorities_users foreign key(username) references users(username));
+    - After setting the path in .bash_profile
+        - enter the below command in command prompt
+        - mysql -u root -p
+        - enter the password now
+        - to change the password
+        - ALTER USER 'root'@'localhost' IDENTIFIED BY 'myNewPassword';
+        - To see the databases - show databases;
+        - to create database - create database databaseName;
+        - use databasename; // to change the database
 
-      create unique index ix_auth_username on authorities (username,authority);
 
-```
-- Now create a data.swl file and insert data into users and authority table
-```
-INSERT INTO users(username,password,enabled)
-values ('user','pass',true);
 
-INSERT INTO users(username,password,enabled)
-values ('admin','pass',true);
-
-INSERT INTO authorities(username,authority)
-values ('user','ROLE_USER');
-
-INSERT INTO authorities(username,authority)
-values ('admin','ROLE_ADMIN');
-```
