@@ -1,4 +1,5 @@
 # How to set up Security in MYSQL using JPA
+https://www.youtube.com/watch?v=TNt3GHuayXs&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE&index=8
 In this , we are going to implement security in MySql Database
 ## First Install and Setup MySql Database
 - Download MySql from below link
@@ -25,6 +26,9 @@ In this , we are going to implement security in MySql Database
         - To see the databases - show databases;
         - to create database - create database databaseName;
         - use databasename; // to change the database
+NOTE: always try to write the insert query in the command line, otherwise it will show error like the column is not in fieldlist;
+## Grant all permission to a user
+-GRANT ALL PRIVILEGES ON springsecurity.* TO 'username'@'localhost';
 
 
 
