@@ -22,6 +22,17 @@
     - enables Spring Boot autoconfiguration and component scanning.
 - @Component
     - is a generic stereotype for a Spring managed component. It turns the class into a Spring bean at the auto-scan time. Classes decorated with this annotation are considered as candidates for auto-detection when using annotation-based configuration and classpath scanning.
+- PostMaping
+- GetMaping
+- @RequestBody
+- @RequestMapping
+- @PutMapping
+- @DeleteMapping
+- @PathVariable
+- @Entity
+- @Table
+- @Id
+- @GeneratedValue
 - @Retention(RetentionPolicy.RUNTIME)
 - @Documented
 - @Inherited
@@ -66,9 +77,17 @@
 - @ConditionalExpression
     - We can use this annotation in more complex situations. Spring will use the marked definition when the SpEL expression is evaluated to true
     - ```
-            @Bean
-            @ConditionalOnExpression("${usemysql} && ${mysqlserver == 'local'}")
-            DataSource dataSource() {
-                // ...
-            }
+         @Bean
+         @ConditionalOnExpression("${usemysql} && ${mysqlserver == 'local'}")
+         DataSource dataSource() {
+          // ...
+         }
+      ```
+- @Conditional
+    - For even more complex conditions, we can create a class evaluating the custom condition. We tell Spring to use this custom condition with @Conditional
+    - ```
+        @Conditional(HibernateCondition.class)
+        Properties additionalProperties() {
+            //...
+        }
       ```
